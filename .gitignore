@@ -1,0 +1,41 @@
+# Folder Unity Generated
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Mm]emoryCaptures/
+/[Uu]ser[Ss]ettings/
+
+# Visual Studio / VS Code / Rider IDE
+*.csproj
+*.sln
+.vscode/
+.vs/
+.idea/
+ExportedObj/
+*.suo
+*.user
+*.userprefs
+
+# Unity3D Generated Meta & Debug Files
+*.pidb
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Build Outputs & Packages
+*.apk
+*.unitypackage
+*.app
+
+# OS & Crash Report
+sysinfo.txt
+.DS_Store
+Thumbs.db
+Desktop.ini
