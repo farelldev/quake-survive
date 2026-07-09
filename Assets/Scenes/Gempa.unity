@@ -4966,7 +4966,7 @@ GameObject:
   - component: {fileID: 323146282}
   - component: {fileID: 323146285}
   - component: {fileID: 323146284}
-  - component: {fileID: 323146283}
+  - component: {fileID: 323146286}
   m_Layer: 0
   m_Name: meja
   m_TagString: Untagged
@@ -4983,26 +4983,12 @@ Transform:
   m_GameObject: {fileID: 323146281}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.91192, y: -2.23702, z: 0}
+  m_LocalPosition: {x: 4.31, y: -2.57, z: 0}
   m_LocalScale: {x: 4.2180676, y: 1.649103, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2024393645}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &323146283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 323146281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c3653c952e889343b78901964566187, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TempatSembunyi
-  isAman: 1
-  namaTempat: meja
 --- !u!61 &323146284
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5108,6 +5094,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &323146286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323146281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aedf28fa8724a447951ee35361a8f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HidingSpot
+  spotName: meja
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -5274,7 +5273,7 @@ GameObject:
   - component: {fileID: 539745559}
   - component: {fileID: 539745562}
   - component: {fileID: 539745561}
-  - component: {fileID: 539745560}
+  - component: {fileID: 539745563}
   m_Layer: 0
   m_Name: Lemari
   m_TagString: Untagged
@@ -5297,20 +5296,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2024393645}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &539745560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 539745558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c3653c952e889343b78901964566187, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TempatSembunyi
-  isAman: 1
-  namaTempat: lemari
 --- !u!61 &539745561
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5416,6 +5401,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &539745563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539745558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aedf28fa8724a447951ee35361a8f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HidingSpot
+  spotName: lemari
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -5602,7 +5600,7 @@ GameObject:
   - component: {fileID: 907803120}
   - component: {fileID: 907803123}
   - component: {fileID: 907803122}
-  - component: {fileID: 907803121}
+  - component: {fileID: 907803124}
   m_Layer: 0
   m_Name: lift
   m_TagString: Untagged
@@ -5625,20 +5623,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2024393645}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &907803121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 907803119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c3653c952e889343b78901964566187, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TempatSembunyi
-  isAman: 0
-  namaTempat: lift
 --- !u!61 &907803122
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5744,6 +5728,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &907803124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907803119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaeaeac9c606d9741847214ddf8df8b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DangerousSpot
+  spotName: lift
 --- !u!1 &1206840896
 GameObject:
   m_ObjectHideFlags: 0
@@ -5935,8 +5932,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1764324512}
-  - component: {fileID: 1764324511}
   - component: {fileID: 1764324513}
+  - component: {fileID: 1764324514}
   m_Layer: 0
   m_Name: Gatau
   m_TagString: Untagged
@@ -5944,20 +5941,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1764324511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1764324510}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2302d089e17e9774db477b296c988736, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Gempa
-  explosionShakeData: {fileID: 11400000, guid: 6ae47208919c6cf458dafeea412de84a, type: 2}
-  debuReruntuhan: {fileID: 167616848}
 --- !u!4 &1764324512
 Transform:
   m_ObjectHideFlags: 0
@@ -5987,10 +5970,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   player: {fileID: 1206840896}
   playerRenderer: {fileID: 1206840897}
-  posisiAwal: {fileID: 1764324512}
-  dataGempa: {fileID: 11400000, guid: 6ae47208919c6cf458dafeea412de84a, type: 2}
-  debu: {fileID: 167616848}
-  sedangSibuk: 0
+  startPosition: {fileID: 1764324512}
+  shakeData: {fileID: 11400000, guid: 6ae47208919c6cf458dafeea412de84a, type: 2}
+  dustParticles: {fileID: 167616848}
+  isBusy: 0
+--- !u!114 &1764324514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764324510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de1861e8930d36a419df9f90c846ac88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Earthquake
+  explosionShakeData: {fileID: 11400000, guid: 6ae47208919c6cf458dafeea412de84a, type: 2}
+  debrisParticles: {fileID: 167616848}
 --- !u!1 &2024393644
 GameObject:
   m_ObjectHideFlags: 0

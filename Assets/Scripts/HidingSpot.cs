@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class HidingSpot : MonoBehaviour
 {
-    public bool isSafe;
+    public virtual bool IsSafe => true;
     public string spotName;
     
     private GameManager gameManager;
@@ -18,5 +18,10 @@ public class HidingSpot : MonoBehaviour
         {
             gameManager.SelectHidingSpot(this);
         }
+    }
+
+    public virtual void OnQuakeEffect()
+    {
+        Debug.Log(spotName + " is shaking slightly but remains intact.");
     }
 }

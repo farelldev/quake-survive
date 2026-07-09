@@ -37,10 +37,11 @@ public class GameManager : MonoBehaviour
         Debug.Log("QUAKE!");
         CameraShakerHandler.Shake(shakeData);
         if(dustParticles != null) dustParticles.Play();
+        hidingSpot.OnQuakeEffect();
         
         yield return new WaitForSeconds(5f); 
 
-        if (hidingSpot.isSafe)
+        if (hidingSpot.IsSafe)
         {
             Debug.Log("POPUP: You Survived! " + hidingSpot.spotName + " successfully held up against the debris");
         }
