@@ -4,7 +4,12 @@ public class HidingSpot : MonoBehaviour
 {
     public virtual bool IsSafe => true;
     public string spotName;
-    
+
+    [Header("Teleport Settings")]
+    [Tooltip("Masukkan Empty GameObject di sini untuk menentukan posisi & ukuran akhir pemain")]
+    public Transform hidingSpot;
+    public bool hasSelected = false;
+
     private GameManager gameManager;
 
     void Start()
@@ -14,6 +19,8 @@ public class HidingSpot : MonoBehaviour
 
     void OnMouseDown()
     {
+        if (hasSelected) return;
+
         if(gameManager != null)
         {
             gameManager.SelectHidingSpot(this);
