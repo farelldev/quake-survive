@@ -1,0 +1,58 @@
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+
+public class UIManager : MonoBehaviour
+{
+    [Header("UI References")]
+    public GameObject popupPanel;
+    public GameObject dimBackground;
+
+    public TextMeshProUGUI titleText;
+    public TextMeshProUGUI messageText;
+    public Image statusIcon1;
+    public Image statusIcon2;
+
+    [Header("Status Sprites")]
+    public Sprite safeSprite;
+    public Sprite dangerSprite;
+
+    void Start()
+    {
+        if (popupPanel != null)
+        {
+            dimBackground.SetActive(false);
+            popupPanel.SetActive(false);
+        }
+    }
+
+    public void ShowResult(string message, bool isSafe)
+    {
+        messageText.text = message;
+
+        if (isSafe)
+        {
+            titleText.text = "SURVIVED!";
+            statusIcon1.sprite = safeSprite;
+            statusIcon2.sprite = safeSprite;
+        }
+        else
+        {
+            titleText.text = "DANGER!";
+            statusIcon1.sprite = dangerSprite;
+            statusIcon2.sprite = dangerSprite;
+        }
+
+        dimBackground.SetActive(true);
+        popupPanel.SetActive(true);
+
+        Time.timeScale = 0f; 
+    }
+
+    public void ClosePopup()
+    {
+        dimBackground.SetActive(false);
+        popupPanel.SetActive(false);
+        Time.timeScale = 1f;
+    }
+}

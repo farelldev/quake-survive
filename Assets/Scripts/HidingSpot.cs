@@ -2,13 +2,18 @@ using UnityEngine;
 
 public class HidingSpot : MonoBehaviour
 {
-    public virtual bool IsSafe => true;
-    public string spotName;
-
     [Header("Teleport Settings")]
     [Tooltip("Masukkan Empty GameObject di sini untuk menentukan posisi & ukuran akhir pemain")]
     public Transform hidingSpot;
     public bool hasSelected = false;
+    public virtual bool IsSafe => true;
+    
+    public string spotName;
+
+    [Header("UI Text")]
+    [TextArea(3, 5)]
+    public string resultMessage;
+
 
     private GameManager gameManager;
 

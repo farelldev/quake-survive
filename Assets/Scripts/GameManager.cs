@@ -17,6 +17,9 @@ public class GameManager : MonoBehaviour
     public bool isBusy = false;
     private Vector3 originalPlayerScale;
 
+    [Header("UI")]
+    public UIManager uiManager;
+
     void Start()
     {
         if (player != null)
@@ -59,13 +62,9 @@ public class GameManager : MonoBehaviour
         hidingSpot.OnQuakeEffect();
         yield return new WaitForSeconds(3f);
 
-        if (hidingSpot.IsSafe)
+        if (uiManager != null) 
         {
-            Debug.Log("POPUP: You Survived! " + hidingSpot.spotName + " successfully held up against the debris");
-        }
-        else
-        {
-            Debug.Log("POPUP: DANGER! " + hidingSpot.spotName + " is fragile and collapsed!");
+            uiManager.ShowResult(hidingSpot.resultMessage, hidingSpot.IsSafe);
         }
 
         yield return new WaitForSeconds(3f); 
