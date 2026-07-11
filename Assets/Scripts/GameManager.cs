@@ -15,10 +15,22 @@ public class GameManager : MonoBehaviour
 
     [Header("Status")]
     public bool isBusy = false;
+    private Vector3 originalPlayerScale;
+
+    [Header("UI")]
+    public UIManager uiManager;
+
+    void Start()
+    {
+        if (player != null)
+        {
+            originalPlayerScale = player.transform.localScale;
+        }
+    }
 
     public void SelectHidingSpot(HidingSpot hidingSpot)
     {
-        if (isBusy) return;
+        if (isBusy || hidingSpot.hasSelected) return;
 
         StartCoroutine(HideRoutine(hidingSpot));
     }
@@ -26,36 +38,67 @@ public class GameManager : MonoBehaviour
     IEnumerator HideRoutine(HidingSpot hidingSpot)
     {
         isBusy = true;
+        hidingSpot.hasSelected = true;
 
-        player.transform.position = hidingSpot.transform.position;
-        
-        playerRenderer.sortingOrder = -1;
+        if (hidingSpot.hidingSpot != null)
+        {
+            player.transform.position = hidingSpot.hidingSpot.position;
+            player.transform.localScale = hidingSpot.hidingSpot.localScale;
+        }
+        else
+        {
+            player.transform.position = hidingSpot.transform.position;
+        }
+        playerRenderer.sortingOrder = 6;
 
-        Debug.Log("Player is hiding under " + hidingSpot.spotName);
+        Debug.Log("Player is hiding at " + hidingSpot.spotName);
         yield return new WaitForSeconds(1f);
 
         Debug.Log("QUAKE!");
         CameraShakerHandler.Shake(shakeData);
         if(dustParticles != null) dustParticles.Play();
-        hidingSpot.OnQuakeEffect();
-        
-        yield return new WaitForSeconds(5f); 
 
-        if (hidingSpot.IsSafe)
+        yield return new WaitForSeconds(2f);
+        hidingSpot.OnQuakeEffect();
+        yield return new WaitForSeconds(3f);
+
+        if (uiManager != null) 
         {
-            Debug.Log("POPUP: You Survived! " + hidingSpot.spotName + " successfully held up against the debris");
-        }
-        else
-        {
-            Debug.Log("POPUP: DANGER! " + hidingSpot.spotName + " is fragile and collapsed!");
+            uiManager.ShowResult(hidingSpot.resultMessage, hidingSpot.IsSafe);
         }
 
         yield return new WaitForSeconds(3f); 
         
         player.transform.position = startPosition.position;
-        playerRenderer.sortingOrder = 5; 
-        
-        Debug.Log("Please select another hiding spot...");
-        isBusy = false; 
+        player.transform.localScale = originalPlayerScale;
+        playerRenderer.sortingOrder = 10;
+
+        CheckGameEnd();
+    }
+
+    void CheckGameEnd()
+    {
+        HidingSpot[] allSpots = FindObjectsByType<HidingSpot>(FindObjectsSortMode.None);
+        bool allDone = true;
+
+        foreach (var spot in allSpots)
+        {
+            if (!spot.hasSelected)
+            {
+                allDone = false;
+                break;
+            }
+        }
+
+        if (allDone)
+        {
+            Debug.Log("GAME OVER: All hiding spots has being tested! Simulation ended.");
+            isBusy = true;
+        }
+        else
+        {
+            Debug.Log("Please select another hiding spot...");
+            isBusy = false;
+        }
     }
 }
