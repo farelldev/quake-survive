@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     [Header("Character")]
     public GameObject player;
+    public PlayerController playerController;
     public SpriteRenderer playerRenderer;
     public Transform startPosition;
 
@@ -49,7 +50,9 @@ public class GameManager : MonoBehaviour
         {
             player.transform.position = hidingSpot.transform.position;
         }
-        playerRenderer.sortingOrder = 6;
+        playerRenderer.sortingOrder = 3;
+
+        if(playerController != null) playerController.SetHiding(true);
 
         Debug.Log("Player is hiding at " + hidingSpot.spotName);
         yield return new WaitForSeconds(1f);
@@ -72,6 +75,8 @@ public class GameManager : MonoBehaviour
         player.transform.position = startPosition.position;
         player.transform.localScale = originalPlayerScale;
         playerRenderer.sortingOrder = 10;
+
+        if (playerController != null) playerController.SetHiding(false);
 
         CheckGameEnd();
     }
