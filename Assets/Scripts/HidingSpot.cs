@@ -7,6 +7,7 @@ public class HidingSpot : MonoBehaviour
     public Transform hidingSpot;
     public bool hasSelected = false;
     public virtual bool IsSafe => true;
+    public virtual string PlayerHurtTrigger => "IsHurt";
     
     public string spotName;
 

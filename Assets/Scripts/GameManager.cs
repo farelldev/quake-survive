@@ -63,14 +63,20 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
         hidingSpot.OnQuakeEffect();
-        yield return new WaitForSeconds(3f);
+
+        if (!hidingSpot.IsSafe && playerController != null)
+        {
+            playerController.PlayHurtAnimation(hidingSpot.PlayerHurtTrigger);
+        }
+
+        yield return new WaitForSeconds(2f);
 
         if (uiManager != null) 
         {
             uiManager.ShowResult(hidingSpot.resultMessage, hidingSpot.IsSafe);
         }
 
-        yield return new WaitForSeconds(3f); 
+        yield return new WaitForSeconds(2f); 
         
         player.transform.position = startPosition.position;
         player.transform.localScale = originalPlayerScale;

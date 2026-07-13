@@ -13,4 +13,12 @@ public class PlayerController : MonoBehaviour
     {
         if(anim != null) anim.SetBool("isHiding", isHiding);
     }
+
+    public void PlayHurtAnimation(string trigger)
+    {
+        if (anim != null)
+        {
+            anim.SetTrigger(trigger);
+        }
+    }
 }

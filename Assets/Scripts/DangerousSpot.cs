@@ -31,4 +31,21 @@ public class DangerousSpot : HidingSpot
             transform.DOMoveY(transform.position.y - 1f, 0.5f);
         }
     }
+
+    public override string PlayerHurtTrigger
+    {
+        get
+        {
+            if (dangerType == DangerType.Break)
+            {
+                return "getScratched";
+            }
+            else if (dangerType == DangerType.Fall)
+            {
+                return "getBruised";
+            }
+            
+            return "IsHurt";
+        }
+    }
 }
