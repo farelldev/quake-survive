@@ -15,6 +15,8 @@ public class HidingSpot : MonoBehaviour
     [TextArea(3, 5)]
     public string resultMessage;
 
+    public SpriteRenderer obstruction;
+
 
     private GameManager gameManager;
 

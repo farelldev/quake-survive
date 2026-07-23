@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using FirstGearGames.SmoothCameraShaker;
+using DG.Tweening;
 
 public class GameManager : MonoBehaviour
 {
@@ -40,6 +41,9 @@ public class GameManager : MonoBehaviour
     {
         isBusy = true;
         hidingSpot.hasSelected = true;
+
+        if (hidingSpot.obstruction != null)
+            hidingSpot.obstruction.DOFade(0.3f, 0.5f);
 
         if (hidingSpot.hidingSpot != null)
         {
@@ -83,6 +87,8 @@ public class GameManager : MonoBehaviour
         playerRenderer.sortingOrder = 10;
 
         if (playerController != null) playerController.SetHiding(false);
+        if (hidingSpot.obstruction != null)
+            hidingSpot.obstruction.DOFade(1f, 0.5f);
 
         CheckGameEnd();
     }
