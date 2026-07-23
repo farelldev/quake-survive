@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
         if (player != null)
         {
             originalPlayerScale = player.transform.localScale;
+            player.transform.DOScaleY(transform.localScale.y * 1.03f, 1f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutSine);
         }
     }
 
@@ -84,11 +85,22 @@ public class GameManager : MonoBehaviour
         
         player.transform.position = startPosition.position;
         player.transform.localScale = originalPlayerScale;
+        player.transform.DOScaleY(transform.localScale.y * 1.03f, 1f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutSine);
         playerRenderer.sortingOrder = 10;
 
         if (playerController != null) playerController.SetHiding(false);
         if (hidingSpot.obstruction != null)
             hidingSpot.obstruction.DOFade(1f, 0.5f);
+
+        Vector3 posisiBawah = startPosition.position;
+        posisiBawah.y -= 10f; // Sesuaikan angka 10 ini agar dia benar-benar sembunyi di luar kamera
+        player.transform.position = posisiBawah;
+
+        // B. Animasikan geser ke atas menuju startPosition dengan gaya memantul (OutBack)
+        player.transform.DOMove(startPosition.position, 0.5f).SetEase(Ease.OutExpo);
+
+        // C. Tunggu animasinya selesai (0.7 detik) sebelum mengecek akhir game
+        yield return new WaitForSeconds(0.7f);
 
         CheckGameEnd();
     }
