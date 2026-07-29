@@ -43,6 +43,8 @@ public class GameManager : MonoBehaviour
         isBusy = true;
         hidingSpot.hasSelected = true;
 
+        player.transform.DOKill();
+
         if (hidingSpot.obstruction != null)
             hidingSpot.obstruction.DOFade(0.3f, 0.5f);
 
@@ -93,13 +95,11 @@ public class GameManager : MonoBehaviour
             hidingSpot.obstruction.DOFade(1f, 0.5f);
 
         Vector3 posisiBawah = startPosition.position;
-        posisiBawah.y -= 10f; // Sesuaikan angka 10 ini agar dia benar-benar sembunyi di luar kamera
+        posisiBawah.y -= 10f;
         player.transform.position = posisiBawah;
 
-        // B. Animasikan geser ke atas menuju startPosition dengan gaya memantul (OutBack)
         player.transform.DOMove(startPosition.position, 0.5f).SetEase(Ease.OutExpo);
 
-        // C. Tunggu animasinya selesai (0.7 detik) sebelum mengecek akhir game
         yield return new WaitForSeconds(0.7f);
 
         CheckGameEnd();
