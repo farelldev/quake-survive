@@ -21,4 +21,12 @@ public class PlayerController : MonoBehaviour
             anim.SetTrigger(trigger);
         }
     }
+
+    public void SetWalking(bool isWalking)
+    {
+        if (anim != null)
+        {
+            anim.SetBool("IsWalking", isWalking); 
+        }
+    }
 }

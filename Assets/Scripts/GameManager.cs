@@ -15,8 +15,12 @@ public class GameManager : MonoBehaviour
     public ShakeData shakeData;
     public ParticleSystem dustParticles;
 
-    [Header("Status")]
-    public bool isBusy = false;
+    [Header("Status (State Machine)")]
+    public GameState currentState = GameState.Intro;
+    public enum GameState { Intro, Idle, Quake, Selesai }
+
+    [Header("Pengaturan Intro")]
+    public Transform introSpawnPoint;
     private Vector3 originalPlayerScale;
 
     [Header("UI")]
@@ -27,20 +31,40 @@ public class GameManager : MonoBehaviour
         if (player != null)
         {
             originalPlayerScale = player.transform.localScale;
-            player.transform.DOScaleY(transform.localScale.y * 1.03f, 1f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutSine);
         }
+
+        StartCoroutine(IntroRoutine());
+    }
+
+    IEnumerator IntroRoutine()
+    {
+        currentState = GameState.Intro;
+
+        if (introSpawnPoint != null) player.transform.position = introSpawnPoint.position;
+
+        if (playerController != null) playerController.SetWalking(true);
+
+        player.transform.DOMove(startPosition.position, 2.5f).SetEase(Ease.Linear);
+        
+        yield return new WaitForSeconds(2.5f); 
+
+        if (playerController != null) playerController.SetWalking(false);
+        if (playerController != null) playerController.SetHiding(false);
+        
+        currentState = GameState.Idle;
+        Debug.Log("Intro selesai, siap memilih tempat sembunyi.");
     }
 
     public void SelectHidingSpot(HidingSpot hidingSpot)
     {
-        if (isBusy || hidingSpot.hasSelected) return;
+        if (currentState != GameState.Idle || hidingSpot.hasSelected) return;
 
         StartCoroutine(HideRoutine(hidingSpot));
     }
 
     IEnumerator HideRoutine(HidingSpot hidingSpot)
     {
-        isBusy = true;
+        currentState = GameState.Quake;
         hidingSpot.hasSelected = true;
 
         if (hidingSpot.obstruction != null)
@@ -93,13 +117,11 @@ public class GameManager : MonoBehaviour
             hidingSpot.obstruction.DOFade(1f, 0.5f);
 
         Vector3 posisiBawah = startPosition.position;
-        posisiBawah.y -= 10f; // Sesuaikan angka 10 ini agar dia benar-benar sembunyi di luar kamera
+        posisiBawah.y -= 10f;
         player.transform.position = posisiBawah;
 
-        // B. Animasikan geser ke atas menuju startPosition dengan gaya memantul (OutBack)
         player.transform.DOMove(startPosition.position, 0.5f).SetEase(Ease.OutExpo);
 
-        // C. Tunggu animasinya selesai (0.7 detik) sebelum mengecek akhir game
         yield return new WaitForSeconds(0.7f);
 
         CheckGameEnd();
@@ -121,13 +143,13 @@ public class GameManager : MonoBehaviour
 
         if (allDone)
         {
-            Debug.Log("GAME OVER: All hiding spots has being tested! Simulation ended.");
-            isBusy = true;
+            Debug.Log("GAME OVER: Semua tempat sudah dites! Simulasi selesai.");
+            currentState = GameState.Selesai; // Kunci game permanen
         }
         else
         {
-            Debug.Log("Please select another hiding spot...");
-            isBusy = false;
+            Debug.Log("Silakan pilih barang lain yang belum dites...");
+            currentState = GameState.Idle; // Buka kunci lagi untuk barang selanjutnya
         }
     }
 }
