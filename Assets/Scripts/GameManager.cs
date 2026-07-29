@@ -67,6 +67,8 @@ public class GameManager : MonoBehaviour
         currentState = GameState.Quake;
         hidingSpot.hasSelected = true;
 
+        player.transform.DOKill();
+
         if (hidingSpot.obstruction != null)
             hidingSpot.obstruction.DOFade(0.3f, 0.5f);
 

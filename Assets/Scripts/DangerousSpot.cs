@@ -35,7 +35,6 @@ public class DangerousSpot : HidingSpot
             transform.DOMoveY(transform.position.y - 1f, 0.5f);
 
             if (VFXHazard != null) VFXHazard.SetActive(true);
-
         }
     }
 
