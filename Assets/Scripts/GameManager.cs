@@ -20,7 +20,8 @@ public class GameManager : MonoBehaviour
     public enum GameState { Intro, Idle, Quake, Selesai }
 
     [Header("Pengaturan Intro")]
-    public Transform introSpawnPoint;
+    public Transform introSpawnPointStart;
+    public Transform introSpawnPointEnd;
     private Vector3 originalPlayerScale;
 
     [Header("UI")]
@@ -40,16 +41,23 @@ public class GameManager : MonoBehaviour
     {
         currentState = GameState.Intro;
 
-        if (introSpawnPoint != null) player.transform.position = introSpawnPoint.position;
+        playerRenderer.sortingOrder = 3;
+
+        if (introSpawnPointStart != null){
+            player.transform.position = introSpawnPointStart.position;
+            player.transform.localScale = introSpawnPointStart.localScale;
+            }
 
         if (playerController != null) playerController.SetWalking(true);
 
-        player.transform.DOMove(startPosition.position, 2.5f).SetEase(Ease.Linear);
+        player.transform.DOMove(introSpawnPointEnd.position, 5f).SetEase(Ease.Linear);
         
-        yield return new WaitForSeconds(2.5f); 
+        yield return new WaitForSeconds(5f); 
 
+        player.transform.position = startPosition.position;
         if (playerController != null) playerController.SetWalking(false);
         if (playerController != null) playerController.SetHiding(false);
+        playerRenderer.sortingOrder = 10;
         
         currentState = GameState.Idle;
         Debug.Log("Intro selesai, siap memilih tempat sembunyi.");

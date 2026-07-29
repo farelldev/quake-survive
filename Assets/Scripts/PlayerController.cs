@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     {
         if (anim != null)
         {
-            anim.SetBool("IsWalking", isWalking); 
+            anim.SetBool("isWalking", isWalking); 
         }
     }
 }
