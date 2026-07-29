@@ -1,11 +1,13 @@
 using UnityEngine;
 using System.Collections;
 using FirstGearGames.SmoothCameraShaker;
+using DG.Tweening;
 
 public class GameManager : MonoBehaviour
 {
     [Header("Character")]
     public GameObject player;
+    public PlayerController playerController;
     public SpriteRenderer playerRenderer;
     public Transform startPosition;
 
@@ -25,6 +27,7 @@ public class GameManager : MonoBehaviour
         if (player != null)
         {
             originalPlayerScale = player.transform.localScale;
+            player.transform.DOScaleY(transform.localScale.y * 1.03f, 1f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutSine);
         }
     }
 
@@ -40,6 +43,11 @@ public class GameManager : MonoBehaviour
         isBusy = true;
         hidingSpot.hasSelected = true;
 
+        player.transform.DOKill();
+
+        if (hidingSpot.obstruction != null)
+            hidingSpot.obstruction.DOFade(0.3f, 0.5f);
+
         if (hidingSpot.hidingSpot != null)
         {
             player.transform.position = hidingSpot.hidingSpot.position;
@@ -49,7 +57,9 @@ public class GameManager : MonoBehaviour
         {
             player.transform.position = hidingSpot.transform.position;
         }
-        playerRenderer.sortingOrder = 6;
+        playerRenderer.sortingOrder = 3;
+
+        if(playerController != null) playerController.SetHiding(true);
 
         Debug.Log("Player is hiding at " + hidingSpot.spotName);
         yield return new WaitForSeconds(1f);
@@ -60,18 +70,37 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
         hidingSpot.OnQuakeEffect();
-        yield return new WaitForSeconds(3f);
+
+        if (!hidingSpot.IsSafe && playerController != null)
+        {
+            playerController.PlayHurtAnimation(hidingSpot.PlayerHurtTrigger);
+        }
+
+        yield return new WaitForSeconds(2f);
 
         if (uiManager != null) 
         {
             uiManager.ShowResult(hidingSpot.resultMessage, hidingSpot.IsSafe);
         }
 
-        yield return new WaitForSeconds(3f); 
+        yield return new WaitForSeconds(2f); 
         
         player.transform.position = startPosition.position;
         player.transform.localScale = originalPlayerScale;
+        player.transform.DOScaleY(transform.localScale.y * 1.03f, 1f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutSine);
         playerRenderer.sortingOrder = 10;
+
+        if (playerController != null) playerController.SetHiding(false);
+        if (hidingSpot.obstruction != null)
+            hidingSpot.obstruction.DOFade(1f, 0.5f);
+
+        Vector3 posisiBawah = startPosition.position;
+        posisiBawah.y -= 10f;
+        player.transform.position = posisiBawah;
+
+        player.transform.DOMove(startPosition.position, 0.5f).SetEase(Ease.OutExpo);
+
+        yield return new WaitForSeconds(0.7f);
 
         CheckGameEnd();
     }

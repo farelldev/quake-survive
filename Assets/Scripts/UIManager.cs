@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using DG.Tweening;
 
 public class UIManager : MonoBehaviour
 {
@@ -45,6 +46,9 @@ public class UIManager : MonoBehaviour
 
         dimBackground.SetActive(true);
         popupPanel.SetActive(true);
+
+        popupPanel.transform.localScale = Vector3.zero;
+        popupPanel.transform.DOScale(Vector3.one, 0.5f).SetEase(Ease.OutBack).SetUpdate(true);
 
         Time.timeScale = 0f; 
     }
