@@ -52,12 +52,29 @@ public class GameManager : MonoBehaviour
 
         player.transform.DOMove(introSpawnPointEnd.position, 5f).SetEase(Ease.Linear);
         
-        yield return new WaitForSeconds(5f); 
+        yield return new WaitForSeconds(4.5f); 
+
+        CameraShakerHandler.Shake(shakeData);
+        if(dustParticles != null) dustParticles.Play();
+
+        yield return new WaitForSeconds(0.5f); 
+
+        if (playerController != null) playerController.SetScared(true);
+        if (playerController != null) playerController.SetWalking(false);
+
+        yield return new WaitForSeconds(5f);
+        
+        if (playerController != null) playerController.SetScared(false);
 
         player.transform.position = startPosition.position;
-        if (playerController != null) playerController.SetWalking(false);
         if (playerController != null) playerController.SetHiding(false);
         playerRenderer.sortingOrder = 10;
+
+        Vector3 posisiBawah = startPosition.position;
+        posisiBawah.y -= 10f;
+        player.transform.position = posisiBawah;
+
+        player.transform.DOMove(startPosition.position, 0.5f).SetEase(Ease.OutExpo);
         
         currentState = GameState.Idle;
         Debug.Log("Intro selesai, siap memilih tempat sembunyi.");

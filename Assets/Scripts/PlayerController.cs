@@ -29,4 +29,12 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("isWalking", isWalking); 
         }
     }
+
+    public void SetScared(bool isScared)
+    {
+        if (anim != null)
+        {
+            anim.SetBool("isScared", isScared); 
+        }
+    }
 }
