@@ -15,8 +15,15 @@ public class GameManager : MonoBehaviour
     public ShakeData shakeData;
     public ParticleSystem dustParticles;
 
-    [Header("Status")]
-    public bool isBusy = false;
+    [Header("Status (State Machine)")]
+    public GameState currentState = GameState.Intro;
+    public enum GameState { Intro, Idle, Quake, Selesai }
+
+    [Header("Intro Settings")]
+    public GameObject blackScreen;
+    public SpriteRenderer blacksprite;
+    public Transform introSpawnPointStart;
+    public Transform introSpawnPointEnd;
     private Vector3 originalPlayerScale;
 
     [Header("UI")]
@@ -27,20 +34,73 @@ public class GameManager : MonoBehaviour
         if (player != null)
         {
             originalPlayerScale = player.transform.localScale;
-            player.transform.DOScaleY(transform.localScale.y * 1.03f, 1f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutSine);
         }
+
+        StartCoroutine(IntroRoutine());
+    }
+
+    IEnumerator IntroRoutine()
+    {
+        currentState = GameState.Intro;
+
+        playerRenderer.sortingOrder = 3;
+
+        if (introSpawnPointStart != null){
+            player.transform.position = introSpawnPointStart.position;
+            player.transform.localScale = introSpawnPointStart.localScale;
+            }
+
+        if (playerController != null) playerController.SetWalking(true);
+        
+        blackScreen.SetActive(true);
+        Color c = blacksprite.color;
+        c.a = 1f;
+        blacksprite.color = c;
+        blacksprite.DOFade(0f, 0.5f);
+
+        yield return new WaitForSeconds(0.5f); 
+        blackScreen.SetActive(false);        
+
+        player.transform.DOMove(introSpawnPointEnd.position, 5f).SetEase(Ease.Linear);
+        
+        yield return new WaitForSeconds(4.5f); 
+
+        CameraShakerHandler.Shake(shakeData);
+        if(dustParticles != null) dustParticles.Play();
+
+        yield return new WaitForSeconds(0.5f); 
+
+        if (playerController != null) playerController.SetScared(true);
+        if (playerController != null) playerController.SetWalking(false);
+
+        yield return new WaitForSeconds(5f);
+        
+        if (playerController != null) playerController.SetScared(false);
+
+        player.transform.position = startPosition.position;
+        if (playerController != null) playerController.SetHiding(false);
+        playerRenderer.sortingOrder = 10;
+
+        Vector3 posisiBawah = startPosition.position;
+        posisiBawah.y -= 10f;
+        player.transform.position = posisiBawah;
+
+        player.transform.DOMove(startPosition.position, 0.5f).SetEase(Ease.OutExpo);
+        
+        currentState = GameState.Idle;
+        Debug.Log("Intro selesai, siap memilih tempat sembunyi.");
     }
 
     public void SelectHidingSpot(HidingSpot hidingSpot)
     {
-        if (isBusy || hidingSpot.hasSelected) return;
+        if (currentState != GameState.Idle || hidingSpot.hasSelected) return;
 
         StartCoroutine(HideRoutine(hidingSpot));
     }
 
     IEnumerator HideRoutine(HidingSpot hidingSpot)
     {
-        isBusy = true;
+        currentState = GameState.Quake;
         hidingSpot.hasSelected = true;
 
         player.transform.DOKill();
@@ -121,13 +181,13 @@ public class GameManager : MonoBehaviour
 
         if (allDone)
         {
-            Debug.Log("GAME OVER: All hiding spots has being tested! Simulation ended.");
-            isBusy = true;
+            Debug.Log("GAME OVER: Semua tempat sudah dites! Simulasi selesai.");
+            currentState = GameState.Selesai; // Kunci game permanen
         }
         else
         {
-            Debug.Log("Please select another hiding spot...");
-            isBusy = false;
+            Debug.Log("Silakan pilih barang lain yang belum dites...");
+            currentState = GameState.Idle; // Buka kunci lagi untuk barang selanjutnya
         }
     }
 }
