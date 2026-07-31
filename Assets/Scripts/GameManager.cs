@@ -19,7 +19,9 @@ public class GameManager : MonoBehaviour
     public GameState currentState = GameState.Intro;
     public enum GameState { Intro, Idle, Quake, Selesai }
 
-    [Header("Pengaturan Intro")]
+    [Header("Intro Settings")]
+    public GameObject blackScreen;
+    public SpriteRenderer blacksprite;
     public Transform introSpawnPointStart;
     public Transform introSpawnPointEnd;
     private Vector3 originalPlayerScale;
@@ -49,6 +51,15 @@ public class GameManager : MonoBehaviour
             }
 
         if (playerController != null) playerController.SetWalking(true);
+        
+        blackScreen.SetActive(true);
+        Color c = blacksprite.color;
+        c.a = 1f;
+        blacksprite.color = c;
+        blacksprite.DOFade(0f, 0.5f);
+
+        yield return new WaitForSeconds(0.5f); 
+        blackScreen.SetActive(false);        
 
         player.transform.DOMove(introSpawnPointEnd.position, 5f).SetEase(Ease.Linear);
         
