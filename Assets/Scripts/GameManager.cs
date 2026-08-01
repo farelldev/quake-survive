@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Status (State Machine)")]
     public GameState currentState = GameState.Intro;
-    public enum GameState { Intro, Idle, Quake, Selesai }
+    public enum GameState { Intro, Idle, Quake, Over }
 
     [Header("Intro Settings")]
     public GameObject blackScreen;
@@ -28,6 +28,15 @@ public class GameManager : MonoBehaviour
 
     [Header("UI")]
     public UIManager uiManager;
+
+    [Header("Dialogue System")]
+    public DialogueManager dialogueManager;
+    [TextArea(2, 5)] public string[] initialText;
+    [TextArea(2, 5)] public string[] quakeText;
+    [TextArea(2, 5)] public string[] chooseText;
+    [TextArea(2, 5)] public string[] chooseAgainText;
+
+    private bool isDialogueActive = false;
 
     void Start()
     {
@@ -43,52 +52,78 @@ public class GameManager : MonoBehaviour
     {
         currentState = GameState.Intro;
 
-        playerRenderer.sortingOrder = 3;
-
-        if (introSpawnPointStart != null){
-            player.transform.position = introSpawnPointStart.position;
-            player.transform.localScale = introSpawnPointStart.localScale;
-            }
-
-        if (playerController != null) playerController.SetWalking(true);
-        
+        // BLACK SCREEN 
         blackScreen.SetActive(true);
         Color c = blacksprite.color;
         c.a = 1f;
         blacksprite.color = c;
         blacksprite.DOFade(0f, 0.5f);
-
         yield return new WaitForSeconds(0.5f); 
         blackScreen.SetActive(false);        
 
+        // 1. SET CHARACTER POSITION
+        if (introSpawnPointStart != null){
+            player.transform.position = introSpawnPointStart.position;
+            player.transform.localScale = introSpawnPointStart.localScale;
+            }
+        playerRenderer.sortingOrder = 3;
+
+        // Initial dialogue
+        if (dialogueManager != null && initialText.Length > 0)
+        {
+            isDialogueActive = true;
+            dialogueManager.StartDialogue(initialText, () => { isDialogueActive = false; });
+        }
+
+        // Character Walking
+        if (playerController != null) playerController.SetWalking(true);
         player.transform.DOMove(introSpawnPointEnd.position, 5f).SetEase(Ease.Linear);
         
         yield return new WaitForSeconds(4.5f); 
+        yield return new WaitUntil(() => !isDialogueActive);
 
+        // 2. EARTHQUAKE INTRO
         CameraShakerHandler.Shake(shakeData);
         if(dustParticles != null) dustParticles.Play();
 
         yield return new WaitForSeconds(0.5f); 
 
+        // Character Is Scared
         if (playerController != null) playerController.SetScared(true);
         if (playerController != null) playerController.SetWalking(false);
 
+        // Intro Quake Dialogue
+        if (dialogueManager != null && quakeText.Length > 0)
+        {
+            isDialogueActive = true;
+            dialogueManager.StartDialogue(quakeText, () => { isDialogueActive = false; });
+            yield return new WaitUntil(() => !isDialogueActive);
+        }
+
         yield return new WaitForSeconds(5f);
         
+        // 3. MOVE TO FRONT OF SCREEN
         if (playerController != null) playerController.SetScared(false);
+        if (playerController != null) playerController.SetHiding(false);
 
         player.transform.position = startPosition.position;
-        if (playerController != null) playerController.SetHiding(false);
         playerRenderer.sortingOrder = 10;
 
+        // Appear from Below
         Vector3 posisiBawah = startPosition.position;
         posisiBawah.y -= 10f;
         player.transform.position = posisiBawah;
-
         player.transform.DOMove(startPosition.position, 0.5f).SetEase(Ease.OutExpo);
         
+        // Choose Spot Dialogue
+        if (dialogueManager != null && chooseText.Length > 0)
+        {
+            isDialogueActive = true;
+            dialogueManager.StartDialogue(chooseText, () => { isDialogueActive = false; });
+            yield return new WaitUntil(() => !isDialogueActive);
+        }
+
         currentState = GameState.Idle;
-        Debug.Log("Intro selesai, siap memilih tempat sembunyi.");
     }
 
     public void SelectHidingSpot(HidingSpot hidingSpot)
@@ -162,15 +197,9 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.7f);
 
-        CheckGameEnd();
-    }
-
-    void CheckGameEnd()
-    {
         HidingSpot[] allSpots = FindObjectsByType<HidingSpot>(FindObjectsSortMode.None);
         bool allDone = true;
-
-        foreach (var spot in allSpots)
+        foreach (HidingSpot spot in allSpots)
         {
             if (!spot.hasSelected)
             {
@@ -181,13 +210,19 @@ public class GameManager : MonoBehaviour
 
         if (allDone)
         {
-            Debug.Log("GAME OVER: Semua tempat sudah dites! Simulasi selesai.");
-            currentState = GameState.Selesai; // Kunci game permanen
+            Debug.Log("Semua tempat sudah dites. Masuk ke Fase Keluar Kelas.");
+            currentState = GameState.Over; 
         }
         else
         {
-            Debug.Log("Silakan pilih barang lain yang belum dites...");
-            currentState = GameState.Idle; // Buka kunci lagi untuk barang selanjutnya
+            if (dialogueManager != null && chooseAgainText.Length > 0)
+            {
+                isDialogueActive = true;
+                dialogueManager.StartDialogue(chooseAgainText, () => { isDialogueActive = false; });
+                yield return new WaitUntil(() => !isDialogueActive);
+            }
+            
+            currentState = GameState.Idle; 
         }
     }
 }
