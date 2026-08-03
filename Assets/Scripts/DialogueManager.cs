@@ -5,40 +5,78 @@ using System;
 
 public class DialogueManager : MonoBehaviour
 {
-    [Header("Referensi UI")]
-    public GameObject dialoguePanel;
-    public TextMeshProUGUI dialogueText;
+    [Header("Instruction References")]
+    public GameObject instructionPanel;
+    public TextMeshProUGUI instructionText;
+    
+    [Header("Narrator References")]
+    public GameObject narratorPanel;
+    public TextMeshProUGUI narratorText;
 
-    [Header("Pengaturan")]
+    [Header("Setting")]
     public float typingSpeed = 0.04f;
 
     private string[] currentLines;
     private int currentLineIndex = 0;
     private bool isTyping = false;
+    private bool currentIsInstruction = false;
     
     private Action onDialogueComplete; 
 
     void Start()
     {
-        if (dialoguePanel != null) dialoguePanel.SetActive(false);
+        CloseAllDialogues();
     }
 
-    public void StartDialogue(string[] lines, Action onComplete)
+    public void ShowSingleDialogue(string content, bool isInstruction)
+    {
+        if (isInstruction)
+        {
+            instructionPanel.SetActive(true);
+            narratorPanel.SetActive(false);
+            instructionText.text = content;
+        }
+        else
+        {
+            narratorPanel.SetActive(true);
+            instructionPanel.SetActive(false);
+            narratorText.text = content;
+        }
+    }
+
+    public void CloseAllDialogues()
+    {
+        if (instructionPanel != null) instructionPanel.SetActive(false);
+        if (narratorPanel != null) narratorPanel.SetActive(false);
+    }
+        
+    public void StartDialogue(string[] lines, bool isInstruction, Action onComplete)
     {
         currentLines = lines;
         currentLineIndex = 0;
+        currentIsInstruction = isInstruction;
         onDialogueComplete = onComplete;
 
-        dialoguePanel.SetActive(true);
-        StartCoroutine(TypeSentence(currentLines[currentLineIndex]));
+        if (currentIsInstruction)
+        {
+            instructionPanel.SetActive(true);
+            narratorPanel.SetActive(false);
+            DisplayCurrentLineInstant();
+        }
+        else
+        {
+            narratorPanel.SetActive(true);
+            instructionPanel.SetActive(false);
+            StartCoroutine(TypeSentence(currentLines[currentLineIndex]));
+        }
     }
 
     public void OnNextClicked()
     {
-        if (isTyping)
+        if (isTyping && !currentIsInstruction)
         {
             StopAllCoroutines();
-            dialogueText.text = currentLines[currentLineIndex];
+            narratorText.text = currentLines[currentLineIndex];
             isTyping = false;
         }
         else
@@ -46,7 +84,10 @@ public class DialogueManager : MonoBehaviour
             currentLineIndex++;
             if (currentLineIndex < currentLines.Length)
             {
-                StartCoroutine(TypeSentence(currentLines[currentLineIndex]));
+                if (currentIsInstruction)
+                    DisplayCurrentLineInstant();
+                else
+                    StartCoroutine(TypeSentence(currentLines[currentLineIndex]));
             }
             else
             {
@@ -55,14 +96,20 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    private void DisplayCurrentLineInstant()
+    {
+        instructionText.text = currentLines[currentLineIndex];
+        isTyping = false;
+    }
+
     IEnumerator TypeSentence(string sentence)
     {
         isTyping = true;
-        dialogueText.text = "";
+        narratorText.text = "";
         
         foreach (char letter in sentence.ToCharArray())
         {
-            dialogueText.text += letter;
+            narratorText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
         
@@ -71,8 +118,7 @@ public class DialogueManager : MonoBehaviour
 
     private void EndDialogue()
     {
-        dialoguePanel.SetActive(false);
-        
+        CloseAllDialogues();
         onDialogueComplete?.Invoke(); 
     }
 }

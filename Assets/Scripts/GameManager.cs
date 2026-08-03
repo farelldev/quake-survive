@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
         if (dialogueManager != null && initialText.Length > 0)
         {
             isDialogueActive = true;
-            dialogueManager.StartDialogue(initialText, () => { isDialogueActive = false; });
+            dialogueManager.StartDialogue(initialText, false, () => { isDialogueActive = false; });
         }
 
         // Character Walking
@@ -96,7 +96,7 @@ public class GameManager : MonoBehaviour
         if (dialogueManager != null && quakeText.Length > 0)
         {
             isDialogueActive = true;
-            dialogueManager.StartDialogue(quakeText, () => { isDialogueActive = false; });
+            dialogueManager.StartDialogue(quakeText, false, () => { isDialogueActive = false; });
             yield return new WaitUntil(() => !isDialogueActive);
         }
 
@@ -119,8 +119,7 @@ public class GameManager : MonoBehaviour
         if (dialogueManager != null && chooseText.Length > 0)
         {
             isDialogueActive = true;
-            dialogueManager.StartDialogue(chooseText, () => { isDialogueActive = false; });
-            yield return new WaitUntil(() => !isDialogueActive);
+            dialogueManager.StartDialogue(chooseText, true, null);
         }
 
         currentState = GameState.Idle;
@@ -129,6 +128,10 @@ public class GameManager : MonoBehaviour
     public void SelectHidingSpot(HidingSpot hidingSpot)
     {
         if (currentState != GameState.Idle || hidingSpot.hasSelected) return;
+        if (dialogueManager != null)
+        {
+            dialogueManager.CloseAllDialogues();
+        }
 
         StartCoroutine(HideRoutine(hidingSpot));
     }
@@ -140,6 +143,7 @@ public class GameManager : MonoBehaviour
 
         player.transform.DOKill();
 
+        // 1. CHARACTER TELEPORT
         if (hidingSpot.obstruction != null)
             hidingSpot.obstruction.DOFade(0.3f, 0.5f);
 
@@ -159,6 +163,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Player is hiding at " + hidingSpot.spotName);
         yield return new WaitForSeconds(1f);
 
+        // 2. QUAKE
         Debug.Log("QUAKE!");
         CameraShakerHandler.Shake(shakeData);
         if(dustParticles != null) dustParticles.Play();
@@ -173,6 +178,7 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
+        // 3. POPUP APPEAR
         if (uiManager != null) 
         {
             uiManager.ShowResult(hidingSpot.resultMessage, hidingSpot.IsSafe);
@@ -180,6 +186,7 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSeconds(2f); 
         
+        // 4. CHARACTER RETURN
         player.transform.position = startPosition.position;
         player.transform.localScale = originalPlayerScale;
         player.transform.DOScaleY(transform.localScale.y * 1.03f, 1f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutSine);
@@ -197,6 +204,7 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.7f);
 
+        // 5. CHECK ALL SPOTS
         HidingSpot[] allSpots = FindObjectsByType<HidingSpot>(FindObjectsSortMode.None);
         bool allDone = true;
         foreach (HidingSpot spot in allSpots)
@@ -210,7 +218,7 @@ public class GameManager : MonoBehaviour
 
         if (allDone)
         {
-            Debug.Log("Semua tempat sudah dites. Masuk ke Fase Keluar Kelas.");
+            Debug.Log("All spot have been selected.");
             currentState = GameState.Over; 
         }
         else
@@ -218,8 +226,7 @@ public class GameManager : MonoBehaviour
             if (dialogueManager != null && chooseAgainText.Length > 0)
             {
                 isDialogueActive = true;
-                dialogueManager.StartDialogue(chooseAgainText, () => { isDialogueActive = false; });
-                yield return new WaitUntil(() => !isDialogueActive);
+                dialogueManager.StartDialogue(chooseAgainText, true, null);
             }
             
             currentState = GameState.Idle; 

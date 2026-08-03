@@ -1,55 +1,55 @@
 fileFormatVersion: 2
-guid: abe54fb16fed66e4c9466d7f985322a2
+guid: 3e465124317624349970032079d92318
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8540397549773956295
-    second: Scratch_0
+      213: -8138463923171569966
+    second: Scratched_0
   - first:
-      213: -1860524887900267798
-    second: Scratch_1
+      213: -4889392371364439586
+    second: Scratched_1
   - first:
-      213: -4811104093488692306
-    second: Scratch_2
+      213: 7361048624831415542
+    second: Scratched_2
   - first:
-      213: -3949757772788844897
-    second: Scratch_3
+      213: 7941457309475569997
+    second: Scratched_3
   - first:
-      213: -7599132192566816011
-    second: Scratch_4
+      213: -7918124613328909726
+    second: Scratched_4
   - first:
-      213: 6520173864561419036
-    second: Scratch_5
+      213: 1085956324959360548
+    second: Scratched_5
   - first:
-      213: 6945433138056601469
-    second: Scratch_6
+      213: 217842406604897782
+    second: Scratched_6
   - first:
-      213: 137742708243532775
-    second: Scratch_7
+      213: 2978104629559309085
+    second: Scratched_7
   - first:
-      213: -1589126308929309263
-    second: Scratch_8
+      213: -968729713758149708
+    second: Scratched_8
   - first:
-      213: -6456911125207613903
-    second: Scratch_9
+      213: 4034224139242126335
+    second: Scratched_9
   - first:
-      213: -975182847242899711
-    second: Scratch_10
+      213: -1626747000912791785
+    second: Scratched_10
   - first:
-      213: 1960120916560061373
-    second: Scratch_11
+      213: -1447998470747474232
+    second: Scratched_11
   - first:
-      213: 1971461181875466854
-    second: Scratch_12
+      213: -9128962462520119004
+    second: Scratched_12
   - first:
-      213: 3963958673968087623
-    second: Scratch_13
+      213: -5675664426224229064
+    second: Scratched_13
   - first:
-      213: -894322389319153160
-    second: Scratch_14
+      213: -6557349424346400560
+    second: Scratched_14
   - first:
-      213: -2048285534945851250
-    second: Scratch_15
+      213: 5727795401110316260
+    second: Scratched_15
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -171,7 +171,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Scratch_0
+      name: Scratched_0
       rect:
         serializedVersion: 2
         x: 0
@@ -186,14 +186,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 93b5b1d6da96a7980800000000000000
-      internalID: -8540397549773956295
+      spriteID: 2dec60a6e2e5e0f80800000000000000
+      internalID: -8138463923171569966
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Scratch_1
+      name: Scratched_1
       rect:
         serializedVersion: 2
         x: 516
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aea5ee0d8761e26e0800000000000000
-      internalID: -1860524887900267798
+      spriteID: ed951591b83652cb0800000000000000
+      internalID: -4889392371364439586
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Scratch_2
+      name: Scratched_2
       rect:
         serializedVersion: 2
         x: 1032
@@ -230,14 +230,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ea3cd2a31568b3db0800000000000000
-      internalID: -4811104093488692306
+      spriteID: 6f4447949b2b72660800000000000000
+      internalID: 7361048624831415542
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Scratch_3
+      name: Scratched_3
       rect:
         serializedVersion: 2
         x: 1548
@@ -252,14 +252,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f96351c7b34af29c0800000000000000
-      internalID: -3949757772788844897
+      spriteID: d41883ae859b53e60800000000000000
+      internalID: 7941457309475569997
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Scratch_4
+      name: Scratched_4
       rect:
         serializedVersion: 2
         x: 0
@@ -274,14 +274,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5f2d1d468857a8690800000000000000
-      internalID: -7599132192566816011
+      spriteID: 26ac04fbd9b2d1290800000000000000
+      internalID: -7918124613328909726
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Scratch_5
+      name: Scratched_5
       rect:
         serializedVersion: 2
         x: 516
@@ -296,14 +296,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c1328fe959f4c7a50800000000000000
-      internalID: 6520173864561419036
+      spriteID: 4269ace1687121f00800000000000000
+      internalID: 1085956324959360548
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Scratch_6
+      name: Scratched_6
       rect:
         serializedVersion: 2
         x: 1032
@@ -318,14 +318,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d7f171df3a2236060800000000000000
-      internalID: 6945433138056601469
+      spriteID: 6fd73beb38ee50300800000000000000
+      internalID: 217842406604897782
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Scratch_7
+      name: Scratched_7
       rect:
         serializedVersion: 2
         x: 1548
@@ -340,14 +340,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7eb814b634c59e100800000000000000
-      internalID: 137742708243532775
+      spriteID: d1334d4c16a545920800000000000000
+      internalID: 2978104629559309085
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Scratch_8
+      name: Scratched_8
       rect:
         serializedVersion: 2
         x: 0
@@ -362,14 +362,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1b57a05aa0a42f9e0800000000000000
-      internalID: -1589126308929309263
+      spriteID: 4b3641835716e82f0800000000000000
+      internalID: -968729713758149708
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Scratch_9
+      name: Scratched_9
       rect:
         serializedVersion: 2
         x: 516
@@ -384,14 +384,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 13e7bb3ba817466a0800000000000000
-      internalID: -6456911125207613903
+      spriteID: ffb35dbfa717cf730800000000000000
+      internalID: 4034224139242126335
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Scratch_10
+      name: Scratched_10
       rect:
         serializedVersion: 2
         x: 1032
@@ -406,14 +406,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 10f680ffd547772f0800000000000000
-      internalID: -975182847242899711
+      spriteID: 7173927b832ac69e0800000000000000
+      internalID: -1626747000912791785
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Scratch_11
+      name: Scratched_11
       rect:
         serializedVersion: 2
         x: 1548
@@ -428,14 +428,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: db32064a69fb33b10800000000000000
-      internalID: 1960120916560061373
+      spriteID: 8c6b9cb001da7ebe0800000000000000
+      internalID: -1447998470747474232
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Scratch_12
+      name: Scratched_12
       rect:
         serializedVersion: 2
         x: 0
@@ -450,14 +450,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 662b82aef790c5b10800000000000000
-      internalID: 1971461181875466854
+      spriteID: 421fc95f1096f4180800000000000000
+      internalID: -9128962462520119004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Scratch_13
+      name: Scratched_13
       rect:
         serializedVersion: 2
         x: 516
@@ -472,14 +472,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 742423a796fc20730800000000000000
-      internalID: 3963958673968087623
+      spriteID: 835659a764dfb31b0800000000000000
+      internalID: -5675664426224229064
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Scratch_14
+      name: Scratched_14
       rect:
         serializedVersion: 2
         x: 1032
@@ -494,14 +494,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8f904f5768ab693f0800000000000000
-      internalID: -894322389319153160
+      spriteID: 0d878bdd07d9ff4a0800000000000000
+      internalID: -6557349424346400560
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Scratch_15
+      name: Scratched_15
       rect:
         serializedVersion: 2
         x: 1548
@@ -516,8 +516,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e884bf288270393e0800000000000000
-      internalID: -2048285534945851250
+      spriteID: 4e4eb45f1973d7f40800000000000000
+      internalID: 5727795401110316260
       vertices: []
       indices: 
       edges: []
@@ -526,7 +526,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c3772c60886773a4aba3f0081a770dc2
+    spriteID: 846c8c8a3db7eab41bf1c64a4bc43b07
     internalID: 0
     vertices: []
     indices: 
@@ -538,22 +538,22 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":4.0},"gridSpriteSize":{"x":516.0,"y":506.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Scratch_0: -8540397549773956295
-      Scratch_1: -1860524887900267798
-      Scratch_10: -975182847242899711
-      Scratch_11: 1960120916560061373
-      Scratch_12: 1971461181875466854
-      Scratch_13: 3963958673968087623
-      Scratch_14: -894322389319153160
-      Scratch_15: -2048285534945851250
-      Scratch_2: -4811104093488692306
-      Scratch_3: -3949757772788844897
-      Scratch_4: -7599132192566816011
-      Scratch_5: 6520173864561419036
-      Scratch_6: 6945433138056601469
-      Scratch_7: 137742708243532775
-      Scratch_8: -1589126308929309263
-      Scratch_9: -6456911125207613903
+      Scratched_0: -8138463923171569966
+      Scratched_1: -4889392371364439586
+      Scratched_10: -1626747000912791785
+      Scratched_11: -1447998470747474232
+      Scratched_12: -9128962462520119004
+      Scratched_13: -5675664426224229064
+      Scratched_14: -6557349424346400560
+      Scratched_15: 5727795401110316260
+      Scratched_2: 7361048624831415542
+      Scratched_3: 7941457309475569997
+      Scratched_4: -7918124613328909726
+      Scratched_5: 1085956324959360548
+      Scratched_6: 217842406604897782
+      Scratched_7: 2978104629559309085
+      Scratched_8: -968729713758149708
+      Scratched_9: 4034224139242126335
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
