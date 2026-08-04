@@ -460,7 +460,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 0
+  looping: 1
   prewarm: 0
   playOnAwake: 0
   useUnscaledTime: 0
@@ -5486,7 +5486,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &268614706
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8242,6 +8242,7 @@ MonoBehaviour:
   narratorPanel: {fileID: 1391662238}
   narratorText: {fileID: 483155291}
   typingSpeed: 0.04
+  isTyping: 0
 --- !u!4 &1251872914
 Transform:
   m_ObjectHideFlags: 0
@@ -8714,14 +8715,16 @@ MonoBehaviour:
   uiManager: {fileID: 401566418}
   dialogueManager: {fileID: 1251872913}
   initialText:
-  - Ini contoh teks narasi yang ada di awal game
-  - kalimat ini bakal muncul setelah kalimat tadi selesai
+  - Pada suatu pagi yang cerah, [nama] memasuki ruang kelas dengan ceria.
+  - Namun, tiba-tiba...
   quakeText:
-  - gempa harusnya udah mulai sekarang
+  - Lantai dan seluruh ruangan bergetar! Sepertinya terjadi gempa!
+  - Getarannya terlalu kuat. Memaksakan diri untuk berlari keluar terlalu berbahaya.
+  - Cepat, cari tempat aman untuk bersembunyi!
   chooseText:
-  - pilih spot
+  - Pilih tempat untuk bersembunyi!
   chooseAgainText:
-  - pilih lagi
+  - Adakah tempat bersembunyi lain?
 --- !u!114 &1764324514
 MonoBehaviour:
   m_ObjectHideFlags: 0

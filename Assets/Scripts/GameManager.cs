@@ -68,19 +68,56 @@ public class GameManager : MonoBehaviour
             }
         playerRenderer.sortingOrder = 3;
 
-        // Initial dialogue
+        // Character Walking
+        float walkDuration = 7f;
+        if (playerController != null) playerController.SetWalking(true);
+        player.transform.DOMove(introSpawnPointEnd.position, walkDuration).SetEase(Ease.Linear);
+
+        // "Pada suatu pagi yang cerah, ..."
         if (dialogueManager != null && initialText.Length > 0)
         {
             isDialogueActive = true;
-            dialogueManager.StartDialogue(initialText, false, () => { isDialogueActive = false; });
+            string[] firstText = new string[] { initialText[0] }; 
+            dialogueManager.StartDialogue(firstText, false, () => { isDialogueActive = false; });
         }
 
-        // Character Walking
-        if (playerController != null) playerController.SetWalking(true);
-        player.transform.DOMove(introSpawnPointEnd.position, 5f).SetEase(Ease.Linear);
-        
-        yield return new WaitForSeconds(4.5f); 
-        yield return new WaitUntil(() => !isDialogueActive);
+        float timer1 = 0f;
+        float maxWait1 = 4.5f;
+
+        while (timer1 < maxWait1)
+        {
+            timer1 += Time.deltaTime;
+            yield return null;
+        }
+
+        if (isDialogueActive)
+        {
+            if (dialogueManager != null) dialogueManager.CloseAllDialogues();
+            isDialogueActive = false;
+        }
+
+        // "Namun, tiba-tiba..."
+        if (dialogueManager != null && initialText.Length > 1)
+        {
+            isDialogueActive = true;
+            string[] secondText = new string[] { initialText[1] };
+            dialogueManager.StartDialogue(secondText, false, () => { isDialogueActive = false; });
+        }
+
+        float timer2 = 0f;
+        float maxWait2 = 2f;
+
+        while (timer2 < maxWait2)
+        {
+            timer2 += Time.deltaTime;
+            yield return null;
+        }
+
+        if (isDialogueActive)
+        {
+            if (dialogueManager != null) dialogueManager.CloseAllDialogues();
+            isDialogueActive = false;
+        }
 
         // 2. EARTHQUAKE INTRO
         CameraShakerHandler.Shake(shakeData);
@@ -93,14 +130,53 @@ public class GameManager : MonoBehaviour
         if (playerController != null) playerController.SetWalking(false);
 
         // Intro Quake Dialogue
-        if (dialogueManager != null && quakeText.Length > 0)
+        float shakeInterval = 0.5f; 
+        float shakeTimer = 0f;
+        
+        // Jeda waktu menunggu SETELAH teks selesai diketik (Misal: 1.5 detik)
+        float maxWaitAfterTyping = 1.5f; 
+
+        if (dialogueManager != null && quakeText != null && quakeText.Length > 0)
         {
-            isDialogueActive = true;
-            dialogueManager.StartDialogue(quakeText, false, () => { isDialogueActive = false; });
-            yield return new WaitUntil(() => !isDialogueActive);
+            for (int i = 0; i < quakeText.Length; i++)
+            {
+                isDialogueActive = true;
+                
+                string[] currText = new string[] { quakeText[i] };
+                dialogueManager.StartDialogue(currText, false, () => { isDialogueActive = false; });
+
+                float postTypingTimer = 0f;
+
+                while (isDialogueActive)
+                {
+                    shakeTimer += Time.deltaTime;
+                    if (shakeTimer >= shakeInterval)
+                    {
+                        CameraShakerHandler.Shake(shakeData);
+                        shakeTimer = 0f;
+                    }
+
+                    if (!dialogueManager.isTyping) 
+                    {
+                        postTypingTimer += Time.deltaTime;
+                        
+                        if (postTypingTimer >= maxWaitAfterTyping)
+                        {
+                            dialogueManager.CloseAllDialogues();
+                            isDialogueActive = false;
+                        }
+                    }
+
+                    yield return null; 
+                }
+            }
         }
 
-        yield return new WaitForSeconds(5f);
+        CameraShakerHandler.FadeOut(1f);
+
+        if (dustParticles != null) dustParticles.Stop();
+        yield return new WaitForSeconds(0.5f);
+        if (playerController != null) playerController.SetScared(false);
         
         // 3. MOVE TO FRONT OF SCREEN
         if (playerController != null) playerController.SetScared(false);
@@ -110,10 +186,11 @@ public class GameManager : MonoBehaviour
         playerRenderer.sortingOrder = 10;
 
         // Appear from Below
-        Vector3 posisiBawah = startPosition.position;
-        posisiBawah.y -= 10f;
-        player.transform.position = posisiBawah;
+        Vector3 belowPosition = startPosition.position;
+        belowPosition.y -= 10f;
+        player.transform.position = belowPosition;
         player.transform.DOMove(startPosition.position, 0.5f).SetEase(Ease.OutExpo);
+        yield return new WaitForSeconds(0.5f);
         
         // Choose Spot Dialogue
         if (dialogueManager != null && chooseText.Length > 0)
@@ -196,9 +273,9 @@ public class GameManager : MonoBehaviour
         if (hidingSpot.obstruction != null)
             hidingSpot.obstruction.DOFade(1f, 0.5f);
 
-        Vector3 posisiBawah = startPosition.position;
-        posisiBawah.y -= 10f;
-        player.transform.position = posisiBawah;
+        Vector3 belowPosition = startPosition.position;
+        belowPosition.y -= 10f;
+        player.transform.position = belowPosition;
 
         player.transform.DOMove(startPosition.position, 0.5f).SetEase(Ease.OutExpo);
 

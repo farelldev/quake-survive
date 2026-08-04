@@ -18,7 +18,7 @@ public class DialogueManager : MonoBehaviour
 
     private string[] currentLines;
     private int currentLineIndex = 0;
-    private bool isTyping = false;
+    [HideInInspector] public bool isTyping = false;
     private bool currentIsInstruction = false;
     
     private Action onDialogueComplete; 
@@ -26,22 +26,6 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         CloseAllDialogues();
-    }
-
-    public void ShowSingleDialogue(string content, bool isInstruction)
-    {
-        if (isInstruction)
-        {
-            instructionPanel.SetActive(true);
-            narratorPanel.SetActive(false);
-            instructionText.text = content;
-        }
-        else
-        {
-            narratorPanel.SetActive(true);
-            instructionPanel.SetActive(false);
-            narratorText.text = content;
-        }
     }
 
     public void CloseAllDialogues()
