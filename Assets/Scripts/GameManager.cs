@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour
         }
 
         float timer1 = 0f;
-        float maxWait1 = 4.5f;
+        float maxWait1 = 5f;
 
         while (timer1 < maxWait1)
         {
@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviour
         }
 
         float timer2 = 0f;
-        float maxWait2 = 2f;
+        float maxWait2 = 1.5f;
 
         while (timer2 < maxWait2)
         {
@@ -130,7 +130,7 @@ public class GameManager : MonoBehaviour
         if (playerController != null) playerController.SetWalking(false);
 
         // Intro Quake Dialogue
-        float shakeInterval = 0.5f; 
+        float shakeInterval = 4.5f; 
         float shakeTimer = 0f;
         
         // Jeda waktu menunggu SETELAH teks selesai diketik (Misal: 1.5 detik)
@@ -153,6 +153,7 @@ public class GameManager : MonoBehaviour
                     if (shakeTimer >= shakeInterval)
                     {
                         CameraShakerHandler.Shake(shakeData);
+                        dustParticles.Play();
                         shakeTimer = 0f;
                     }
 
@@ -173,7 +174,6 @@ public class GameManager : MonoBehaviour
         }
 
         CameraShakerHandler.FadeOut(1f);
-
         if (dustParticles != null) dustParticles.Stop();
         yield return new WaitForSeconds(0.5f);
         if (playerController != null) playerController.SetScared(false);

@@ -2,12 +2,17 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using System;
+using Microsoft.Unity.VisualStudio.Editor;
+using DG.Tweening;
 
 public class DialogueManager : MonoBehaviour
 {
     [Header("Instruction References")]
     public GameObject instructionPanel;
     public TextMeshProUGUI instructionText;
+    public GameObject instructionIcon;
+    private Tween iconPulseTween;
+    private Vector3 originalIconScale;
     
     [Header("Narrator References")]
     public GameObject narratorPanel;
@@ -26,12 +31,31 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         CloseAllDialogues();
+
+        if (instructionIcon != null)
+        {
+            originalIconScale = instructionIcon.transform.localScale;
+        }
+    }
+
+    void Update()
+    {
+        if (instructionIcon != null && instructionPanel.activeSelf)
+        {
+            
+        }
     }
 
     public void CloseAllDialogues()
     {
         if (instructionPanel != null) instructionPanel.SetActive(false);
         if (narratorPanel != null) narratorPanel.SetActive(false);
+
+        if (iconPulseTween != null)
+        {
+            iconPulseTween.Kill();
+            if (instructionIcon != null) instructionIcon.transform.localScale = originalIconScale; // Kembalikan ke ukuran normal
+        }
     }
         
     public void StartDialogue(string[] lines, bool isInstruction, Action onComplete)
@@ -46,6 +70,15 @@ public class DialogueManager : MonoBehaviour
             instructionPanel.SetActive(true);
             narratorPanel.SetActive(false);
             DisplayCurrentLineInstant();
+
+            if (instructionIcon != null)
+            {
+                instructionIcon.transform.localScale = originalIconScale;
+                
+                iconPulseTween = instructionIcon.transform.DOScale(originalIconScale * 1.05f, 1f)
+                                  .SetLoops(-1, LoopType.Yoyo)
+                                  .SetEase(Ease.InOutSine);
+            }
         }
         else
         {
