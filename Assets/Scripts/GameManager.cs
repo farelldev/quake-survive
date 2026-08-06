@@ -35,9 +35,8 @@ public class GameManager : MonoBehaviour
     [TextArea(2, 5)] public string[] quakeText;
     [TextArea(2, 5)] public string[] chooseText;
     [TextArea(2, 5)] public string[] chooseAgainText;
-
     private bool isDialogueActive = false;
-
+    private int spotSelected = 0;
     void Start()
     {
         if (player != null)
@@ -196,7 +195,8 @@ public class GameManager : MonoBehaviour
         if (dialogueManager != null && chooseText.Length > 0)
         {
             isDialogueActive = true;
-            dialogueManager.StartDialogue(chooseText, true, null);
+            string[] currText = new string[] { chooseText[0] + " (" + spotSelected + "/4)" };
+            dialogueManager.StartDialogue(currText, true, null);
         }
 
         currentState = GameState.Idle;
@@ -209,6 +209,8 @@ public class GameManager : MonoBehaviour
         {
             dialogueManager.CloseAllDialogues();
         }
+
+        spotSelected++;
 
         StartCoroutine(HideRoutine(hidingSpot));
     }
@@ -303,7 +305,8 @@ public class GameManager : MonoBehaviour
             if (dialogueManager != null && chooseAgainText.Length > 0)
             {
                 isDialogueActive = true;
-                dialogueManager.StartDialogue(chooseAgainText, true, null);
+                string[] currText = new string[] { chooseAgainText[0] + " (" + spotSelected + "/4)" };
+                dialogueManager.StartDialogue(currText, true, null);
             }
             
             currentState = GameState.Idle; 
