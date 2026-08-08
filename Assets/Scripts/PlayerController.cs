@@ -37,4 +37,20 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("isScared", isScared); 
         }
     }
+
+    public void SetRunning(bool isRunning)
+    {
+        if (anim != null)
+        {
+            anim.SetBool("isRunning", isRunning); 
+        }
+    }
+
+    public void triggerStanding(string trigger)
+    {
+        if (anim != null)
+        {
+            anim.SetTrigger(trigger);
+        }
+    }
 }

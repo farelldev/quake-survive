@@ -6184,7 +6184,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pada suatu pagi hari yang cerah, Budi masuk ke ruang kelas dengan ceria.
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0abf29bac58907545812238d98bc2146, type: 2}
   m_sharedMaterial: {fileID: 6973976399332640713, guid: 0abf29bac58907545812238d98bc2146, type: 2}
@@ -7122,7 +7122,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pilih tempat bersembunyi!
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0abf29bac58907545812238d98bc2146, type: 2}
   m_sharedMaterial: {fileID: 6973976399332640713, guid: 0abf29bac58907545812238d98bc2146, type: 2}
@@ -8065,7 +8065,7 @@ Transform:
   m_GameObject: {fileID: 1188435084}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.8, y: -2.72, z: 0}
+  m_LocalPosition: {x: 15.1, y: 0.2, z: 0}
   m_LocalScale: {x: -0.33, y: 0.33, z: 0.33}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8159,10 +8159,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1988602239}
-  - {fileID: 1239546412}
   - {fileID: 1188435085}
   - {fileID: 1073686545}
+  - {fileID: 1988602239}
+  - {fileID: 1239546412}
   - {fileID: 1086631242}
   - {fileID: 639240276}
   - {fileID: 257243909}
@@ -8726,6 +8726,8 @@ MonoBehaviour:
   - Pilih tempat untuk bersembunyi!
   chooseAgainText:
   - Adakah tempat bersembunyi lain?
+  quakeSubdsideText:
+  - Ayam goreng rasanya enak sekali
 --- !u!114 &1764324514
 MonoBehaviour:
   m_ObjectHideFlags: 0
