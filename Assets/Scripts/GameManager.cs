@@ -35,6 +35,8 @@ public class GameManager : MonoBehaviour
     [TextArea(2, 5)] public string[] quakeText;
     [TextArea(2, 5)] public string[] chooseText;
     [TextArea(2, 5)] public string[] chooseAgainText;
+    [TextArea(2, 5)] public string[] quakeSubdsideText;
+    [TextArea(2, 5)] public string[] getOutText;
     private bool isDialogueActive = false;
     private int spotSelected = 0;
     void Start()
@@ -252,7 +254,7 @@ public class GameManager : MonoBehaviour
 
         if (!hidingSpot.IsSafe && playerController != null)
         {
-            playerController.PlayHurtAnimation(hidingSpot.PlayerHurtTrigger);
+            playerController.TriggerAnim(hidingSpot.PlayerHurtTrigger);
         }
 
         yield return new WaitForSeconds(2f);
@@ -265,25 +267,7 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSeconds(2f); 
         
-        // 4. CHARACTER RETURN
-        player.transform.position = startPosition.position;
-        player.transform.localScale = originalPlayerScale;
-        player.transform.DOScaleY(transform.localScale.y * 1.03f, 1f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutSine);
-        playerRenderer.sortingOrder = 10;
-
-        if (playerController != null) playerController.SetHiding(false);
-        if (hidingSpot.obstruction != null)
-            hidingSpot.obstruction.DOFade(1f, 0.5f);
-
-        Vector3 belowPosition = startPosition.position;
-        belowPosition.y -= 10f;
-        player.transform.position = belowPosition;
-
-        player.transform.DOMove(startPosition.position, 0.5f).SetEase(Ease.OutExpo);
-
-        yield return new WaitForSeconds(0.7f);
-
-        // 5. CHECK ALL SPOTS
+        // 4. CHECK ALL SPOTS
         HidingSpot[] allSpots = FindObjectsByType<HidingSpot>(FindObjectsSortMode.None);
         bool allDone = true;
         foreach (HidingSpot spot in allSpots)
@@ -295,21 +279,76 @@ public class GameManager : MonoBehaviour
             }
         }
 
+        // 5. DECISION BRANCH
         if (allDone)
         {
-            Debug.Log("All spot have been selected.");
-            currentState = GameState.Over; 
+            Debug.Log("Semua spot sudah dites. Masuk ke Fase Outro dari tempat sembunyi.");
+            StartCoroutine(OutroRoutine(hidingSpot));
         }
         else
         {
+            player.transform.position = startPosition.position;
+            player.transform.localScale = originalPlayerScale;
+            player.transform.DOScaleY(transform.localScale.y * 1.03f, 1f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutSine);
+            playerRenderer.sortingOrder = 10;
+
+            if (playerController != null) playerController.SetHiding(false);
+            if (hidingSpot.obstruction != null)
+                hidingSpot.obstruction.DOFade(1f, 0.5f);
+
+            Vector3 belowPosition = startPosition.position;
+            belowPosition.y -= 10f;
+            player.transform.position = belowPosition;
+
+            player.transform.DOMove(startPosition.position, 0.5f).SetEase(Ease.OutExpo);
+
+            yield return new WaitForSeconds(0.7f);
+
             if (dialogueManager != null && chooseAgainText.Length > 0)
             {
                 isDialogueActive = true;
                 string[] currText = new string[] { chooseAgainText[0] + " (" + spotSelected + "/4)" };
-                dialogueManager.StartDialogue(currText, true, null);
+                dialogueManager.StartDialogue(currText, true, () => { isDialogueActive = false; });
             }
             
             currentState = GameState.Idle; 
         }
+    }
+
+    IEnumerator OutroRoutine(HidingSpot hidingSpot)
+    {
+        currentState = GameState.Over;
+        
+        yield return new WaitForSeconds(1f);
+
+        player.transform.position = hidingSpot.standSpot.position;
+
+        if (playerController != null) 
+        {
+            playerController.TriggerAnim("standing");
+            playerController.SetHiding(false);
+        }
+
+        if (dialogueManager != null && quakeSubdsideText != null && quakeSubdsideText.Length > 0)
+        {
+            isDialogueActive = true;
+            dialogueManager.StartDialogue(quakeSubdsideText, false, () => { isDialogueActive = false; });
+            
+            yield return new WaitUntil(() => !isDialogueActive);
+        }
+    
+        if (dialogueManager != null && getOutText != null && getOutText.Length > 0)
+        {
+            dialogueManager.StartDialogue(getOutText, true, null);
+        }
+
+        if (playerController != null)
+        {
+            playerController.EnableManualControl(true);
+        }
+
+        Debug.Log("Player sekarang bisa jalan bebas pakai WASD.");
+
+
     }
 }

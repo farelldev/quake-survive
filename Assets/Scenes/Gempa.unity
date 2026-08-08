@@ -5262,7 +5262,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: 5843985864524226762, guid: 2963714c55a33b1449494094a05c3018, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5354,6 +5354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DangerousSpot
   hidingSpot: {fileID: 104708663}
+  standSpot: {fileID: 104708663}
   hasSelected: 0
   spotName: blackboard
   resultMessage: The blackboard is highly unstable! During the quake, it collapsed
@@ -5749,6 +5750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HidingSpot
   hidingSpot: {fileID: 242193849}
+  standSpot: {fileID: 242193849}
   hasSelected: 0
   spotName: corner room
   resultMessage: The sturdy corner of the room protected you from the falling objects.
@@ -6184,7 +6186,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pada suatu pagi hari yang cerah, Budi masuk ke ruang kelas dengan ceria.
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0abf29bac58907545812238d98bc2146, type: 2}
   m_sharedMaterial: {fileID: 6973976399332640713, guid: 0abf29bac58907545812238d98bc2146, type: 2}
@@ -6558,6 +6560,7 @@ GameObject:
   - component: {fileID: 559351801}
   - component: {fileID: 559351803}
   - component: {fileID: 559351802}
+  - component: {fileID: 559351804}
   m_Layer: 0
   m_Name: Table
   m_TagString: Untagged
@@ -6579,6 +6582,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1653586536}
+  - {fileID: 2139103065}
   - {fileID: 2049202634}
   m_Father: {fileID: 1238966782}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6629,7 +6633,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: 497600754102043572, guid: d265f8d08667dc945b8e03ac086a302d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6671,7 +6675,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -6700,6 +6704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HidingSpot
   hidingSpot: {fileID: 1653586536}
+  standSpot: {fileID: 2139103065}
   hasSelected: 0
   spotName: table
   resultMessage: The desk is a safe spot! Its sturdy structure protected you from
@@ -6708,6 +6713,52 @@ MonoBehaviour:
   shineEffect: {fileID: 2049202633}
   pulsePace: 3
   fadePace: 3
+--- !u!61 &559351804
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559351799}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: -5.071223}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 18.720001, y: 14.430638}
+    newSize: {x: 18.720001, y: 14.430638}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 18.041817, y: 4.7260237}
+  m_EdgeRadius: 0
 --- !u!1 &562109673
 GameObject:
   m_ObjectHideFlags: 0
@@ -6718,6 +6769,7 @@ GameObject:
   m_Component:
   - component: {fileID: 562109674}
   - component: {fileID: 562109675}
+  - component: {fileID: 562109676}
   m_Layer: 0
   m_Name: Chair table_0 (1)
   m_TagString: Untagged
@@ -6787,7 +6839,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2127162910159535221, guid: da035a0c89a30c74e97c6641609caa2e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6799,6 +6851,52 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!61 &562109676
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562109673}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: -5.071223}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 18.720001, y: 14.430638}
+    newSize: {x: 18.720001, y: 14.430638}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 18.041817, y: 4.7260237}
+  m_EdgeRadius: 0
 --- !u!1 &566091907
 GameObject:
   m_ObjectHideFlags: 0
@@ -6984,6 +7082,7 @@ GameObject:
   m_Component:
   - component: {fileID: 639240276}
   - component: {fileID: 639240277}
+  - component: {fileID: 639240278}
   m_Layer: 0
   m_Name: Classroom_0
   m_TagString: Untagged
@@ -7065,6 +7164,65 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!60 &639240278
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639240275}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 16.72, y: 9.41}
+    newSize: {x: 16.72, y: 9.41}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -8.36, y: 4.705}
+      - {x: -8.339321, y: -2.480905}
+      - {x: -5.673079, y: -1.531987}
+      - {x: -5.481143, y: -1.5382413}
+      - {x: -5.5076838, y: -2.1150637}
+      - {x: -3.2917461, y: -2.2558148}
+      - {x: -2.8578503, y: -1.4858856}
+      - {x: 5.0406537, y: -1.4800397}
+      - {x: 5.7037926, y: -1.5861248}
+      - {x: 8.349845, y: -2.5266385}
+      - {x: 8.198101, y: 4.563075}
+      - {x: -8.350555, y: 4.685748}
+  m_UseDelaunayMesh: 1
 --- !u!1 &645527004
 GameObject:
   m_ObjectHideFlags: 0
@@ -7122,7 +7280,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pilih tempat bersembunyi!
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0abf29bac58907545812238d98bc2146, type: 2}
   m_sharedMaterial: {fileID: 6973976399332640713, guid: 0abf29bac58907545812238d98bc2146, type: 2}
@@ -7447,6 +7605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DangerousSpot
   hidingSpot: {fileID: 14401598}
+  standSpot: {fileID: 14401598}
   hasSelected: 0
   spotName: glass
   resultMessage: Standing near the window is very dangerous! The glass shattered
@@ -7847,8 +8006,8 @@ Transform:
   m_GameObject: {fileID: 1073686544}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.83, y: -2.3600001, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.1806152}
+  m_LocalPosition: {x: 15.3505535, y: 0.66999996, z: 0}
+  m_LocalScale: {x: 0.39999998, y: 0.39999998, z: 0.18061519}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1238966782}
@@ -7902,7 +8061,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 6
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3152249253537791720, guid: 8a0647f5a74e03544820619d4d4e96c7, type: 3}
+  m_Sprite: {fileID: -3842353275482561300, guid: 3ed8fccc882f2d24ca5db003f14807ff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7924,6 +8083,8 @@ GameObject:
   - component: {fileID: 1086631243}
   - component: {fileID: 1086631244}
   - component: {fileID: 1086631245}
+  - component: {fileID: 1086631247}
+  - component: {fileID: 1086631246}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -8004,7 +8165,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!95 &1086631244
 Animator:
   serializedVersion: 7
@@ -8039,6 +8200,84 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47ed33d62f8862b43ba8752fed659b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  moveSpeed: 4
+  minY: -2
+  maxY: -0.57
+  minScale: 0.33
+  maxScale: 0.365
+--- !u!50 &1086631246
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086631241}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!61 &1086631247
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086631241}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.32037598, y: -2.1797476}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 9.56, y: 19.85}
+    newSize: {x: 9.56, y: 19.85}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.9787983, y: 0.8050518}
+  m_EdgeRadius: 0
 --- !u!1 &1188435084
 GameObject:
   m_ObjectHideFlags: 0
@@ -8065,8 +8304,8 @@ Transform:
   m_GameObject: {fileID: 1188435084}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.8, y: -2.72, z: 0}
-  m_LocalScale: {x: -0.33, y: 0.33, z: 0.33}
+  m_LocalPosition: {x: 17.41, y: 0.67, z: 0}
+  m_LocalScale: {x: -0.32999998, y: 0.32999998, z: 0.32999998}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1238966782}
@@ -8159,10 +8398,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1988602239}
-  - {fileID: 1239546412}
   - {fileID: 1188435085}
   - {fileID: 1073686545}
+  - {fileID: 1988602239}
+  - {fileID: 1239546412}
   - {fileID: 1086631242}
   - {fileID: 639240276}
   - {fileID: 257243909}
@@ -8726,6 +8965,10 @@ MonoBehaviour:
   - Pilih tempat untuk bersembunyi!
   chooseAgainText:
   - Adakah tempat bersembunyi lain?
+  quakeSubdsideText:
+  - Ayam goreng rasanya enak sekali
+  getOutText:
+  - keluar woi
 --- !u!114 &1764324514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8828,6 +9071,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1777597792}
   - component: {fileID: 1777597793}
+  - component: {fileID: 1777597794}
   m_Layer: 0
   m_Name: Chair table_0
   m_TagString: Untagged
@@ -8897,7 +9141,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2127162910159535221, guid: da035a0c89a30c74e97c6641609caa2e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -8909,6 +9153,52 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!61 &1777597794
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777597791}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: -5.071223}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 18.720001, y: 14.430638}
+    newSize: {x: 18.720001, y: 14.430638}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 18.041817, y: 4.7260237}
+  m_EdgeRadius: 0
 --- !u!1 &1812240345
 GameObject:
   m_ObjectHideFlags: 0
@@ -8919,6 +9209,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1812240346}
   - component: {fileID: 1812240347}
+  - component: {fileID: 1812240348}
   m_Layer: 0
   m_Name: Chair table_0 (3)
   m_TagString: Untagged
@@ -8988,7 +9279,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2127162910159535221, guid: da035a0c89a30c74e97c6641609caa2e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -9000,6 +9291,52 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!61 &1812240348
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812240345}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: -5.071223}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 18.720001, y: 14.430638}
+    newSize: {x: 18.720001, y: 14.430638}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 18.041817, y: 4.7260237}
+  m_EdgeRadius: 0
 --- !u!1 &1877171374
 GameObject:
   m_ObjectHideFlags: 0
@@ -9763,6 +10100,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2136185603}
   m_CullTransparentMesh: 1
+--- !u!1 &2139103064
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2139103065}
+  m_Layer: 0
+  m_Name: TableStand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2139103065
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139103064}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10.55, y: -0.49855554, z: 0}
+  m_LocalScale: {x: -0.35, y: 0.35, z: 0.35}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 559351800}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
