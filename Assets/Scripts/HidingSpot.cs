@@ -6,6 +6,7 @@ public class HidingSpot : MonoBehaviour
     [Header("Teleport Settings")]
     [Tooltip("Masukkan Empty GameObject di sini untuk menentukan posisi & ukuran akhir pemain")]
     public Transform hidingSpot;
+    public Transform standSpot;
     public bool hasSelected = false;
     public virtual bool IsSafe => true;
     public virtual string PlayerHurtTrigger => "IsHurt";

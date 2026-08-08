@@ -1,115 +1,115 @@
 fileFormatVersion: 2
-guid: 3ed8fccc882f2d24ca5db003f14807ff
+guid: f86c81767de24cf49ba0b72122caf899
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3842353275482561300
-    second: Standing_0
+      213: -3120837138067676503
+    second: Standing 2_0
   - first:
-      213: 4096183237034929139
-    second: Standing_1
+      213: 181598155074346227
+    second: Standing 2_1
   - first:
-      213: -2965060805336624199
-    second: Standing_2
+      213: 5556517464835852933
+    second: Standing 2_2
   - first:
-      213: 2644962545231854332
-    second: Standing_3
+      213: 4790227104886413572
+    second: Standing 2_3
   - first:
-      213: -8970904685873194762
-    second: Standing_4
+      213: -1406358943623634200
+    second: Standing 2_4
   - first:
-      213: -6458429237884135735
-    second: Standing_5
+      213: 4802950880395697750
+    second: Standing 2_5
   - first:
-      213: 6145908009506561186
-    second: Standing_6
+      213: -7480551816705691564
+    second: Standing 2_6
   - first:
-      213: -1866220382425048062
-    second: Standing_7
+      213: -5707803814867592895
+    second: Standing 2_7
   - first:
-      213: 3445722214392535029
-    second: Standing_8
+      213: 6871257541723164260
+    second: Standing 2_8
   - first:
-      213: 373976769574135332
-    second: Standing_9
+      213: 1043824137489097922
+    second: Standing 2_9
   - first:
-      213: -8984320562994086140
-    second: Standing_10
+      213: 2324748435066677638
+    second: Standing 2_10
   - first:
-      213: -5811373259393792371
-    second: Standing_11
+      213: -3478218654818913626
+    second: Standing 2_11
   - first:
-      213: -679056583648792307
-    second: Standing_12
+      213: -1210639501341386691
+    second: Standing 2_12
   - first:
-      213: 7715538633338171422
-    second: Standing_13
+      213: -6696692548948566769
+    second: Standing 2_13
   - first:
-      213: 2759147501574320269
-    second: Standing_14
+      213: -670200438781679450
+    second: Standing 2_14
   - first:
-      213: -6180453766729105823
-    second: Standing_15
+      213: -8452367493097033582
+    second: Standing 2_15
   - first:
-      213: 7785310874776202017
-    second: Standing_16
+      213: -8789640459565728395
+    second: Standing 2_16
   - first:
-      213: 6418504303073188206
-    second: Standing_17
+      213: -6966093446495562092
+    second: Standing 2_17
   - first:
-      213: -3961421437843817612
-    second: Standing_18
+      213: -7903269790511594256
+    second: Standing 2_18
   - first:
-      213: 7226818251703383709
-    second: Standing_19
+      213: 7369708699739361793
+    second: Standing 2_19
   - first:
-      213: -8049634228014346236
-    second: Standing_20
+      213: -1983825045943229874
+    second: Standing 2_20
   - first:
-      213: -1664613616637987500
-    second: Standing_21
+      213: 3355583515734923767
+    second: Standing 2_21
   - first:
-      213: 6919615994193793187
-    second: Standing_22
+      213: -5965135412462153398
+    second: Standing 2_22
   - first:
-      213: -7398088096093990164
-    second: Standing_23
+      213: -3665463128254413704
+    second: Standing 2_23
   - first:
-      213: -6439836882631726592
-    second: Standing_24
+      213: -4177561723739208391
+    second: Standing 2_24
   - first:
-      213: -4010548144316516600
-    second: Standing_25
+      213: 7769633299556846326
+    second: Standing 2_25
   - first:
-      213: -2363903607530845681
-    second: Standing_26
+      213: 6015819264487604803
+    second: Standing 2_26
   - first:
-      213: 3490846435199686713
-    second: Standing_27
+      213: 6239268016000288933
+    second: Standing 2_27
   - first:
-      213: -9130415185970368968
-    second: Standing_28
+      213: 8430463268757991742
+    second: Standing 2_28
   - first:
-      213: -1858990453881177454
-    second: Standing_29
+      213: 3581398388677000006
+    second: Standing 2_29
   - first:
-      213: 5936949922358510954
-    second: Standing_30
+      213: -3566068237026975859
+    second: Standing 2_30
   - first:
-      213: -1702642971854133877
-    second: Standing_31
+      213: 2259689747591516595
+    second: Standing 2_31
   - first:
-      213: -6505467214345212445
-    second: Standing_32
+      213: 2193419209330837287
+    second: Standing 2_32
   - first:
-      213: 7201683127210773961
-    second: Standing_33
+      213: -7925462578715892032
+    second: Standing 2_33
   - first:
-      213: -4747190513825269614
-    second: Standing_34
+      213: -8748022112832222703
+    second: Standing 2_34
   - first:
-      213: -850017272045461676
-    second: Standing_35
+      213: 2236017486956959098
+    second: Standing 2_35
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -231,793 +231,793 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Standing_0
+      name: Standing 2_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 3860
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 30
+        y: 3623
+        width: 289
+        height: 717
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ce4ad49bd083daac0800000000000000
-      internalID: -3842353275482561300
+      spriteID: 9a221a7682f80b4d0800000000000000
+      internalID: -3120837138067676503
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_1
+      name: Standing 2_1
       rect:
         serializedVersion: 2
-        x: 308
-        y: 3860
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 378
+        y: 3624
+        width: 289
+        height: 716
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3fb606a93f098d830800000000000000
-      internalID: 4096183237034929139
+      spriteID: 3fc92155f8a258200800000000000000
+      internalID: 181598155074346227
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_2
+      name: Standing 2_2
       rect:
         serializedVersion: 2
-        x: 616
-        y: 3860
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 726
+        y: 3624
+        width: 291
+        height: 716
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9b31a7838ecf9d6d0800000000000000
-      internalID: -2965060805336624199
+      spriteID: 58a8bcfc137bc1d40800000000000000
+      internalID: 5556517464835852933
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_3
+      name: Standing 2_3
       rect:
         serializedVersion: 2
-        x: 924
-        y: 3860
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 1074
+        y: 3624
+        width: 292
+        height: 715
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cfaf1c8db6bc4b420800000000000000
-      internalID: 2644962545231854332
+      spriteID: 409d3341c2e4a7240800000000000000
+      internalID: 4790227104886413572
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_4
+      name: Standing 2_4
       rect:
         serializedVersion: 2
-        x: 1232
-        y: 3860
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 1423
+        y: 3624
+        width: 295
+        height: 715
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6f814a4d7b1f08380800000000000000
-      internalID: -8970904685873194762
+      spriteID: 8e2ae92fdfb9b7ce0800000000000000
+      internalID: -1406358943623634200
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_5
+      name: Standing 2_5
       rect:
         serializedVersion: 2
-        x: 1540
-        y: 3860
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 1771
+        y: 3623
+        width: 299
+        height: 715
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9c65bec83dc0f56a0800000000000000
-      internalID: -6458429237884135735
+      spriteID: 65e92abe06287a240800000000000000
+      internalID: 4802950880395697750
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_6
+      name: Standing 2_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 3088
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 32
+        y: 2899
+        width: 300
+        height: 714
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2acddd0b5c6aa4550800000000000000
-      internalID: 6145908009506561186
+      spriteID: 450ba51a1cdbf2890800000000000000
+      internalID: -7480551816705691564
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_7
+      name: Standing 2_7
       rect:
         serializedVersion: 2
-        x: 308
-        y: 3088
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 381
+        y: 2899
+        width: 302
+        height: 714
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 20c16f8237ad916e0800000000000000
-      internalID: -1866220382425048062
+      spriteID: 149923febaec9c0b0800000000000000
+      internalID: -5707803814867592895
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_8
+      name: Standing 2_8
       rect:
         serializedVersion: 2
-        x: 616
-        y: 3088
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 729
+        y: 2898
+        width: 303
+        height: 715
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5f71a87091aa1df20800000000000000
-      internalID: 3445722214392535029
+      spriteID: 46e02a6245c9b5f50800000000000000
+      internalID: 6871257541723164260
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_9
+      name: Standing 2_9
       rect:
         serializedVersion: 2
-        x: 924
-        y: 3088
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 1077
+        y: 2898
+        width: 307
+        height: 714
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 426e6b8f3e1a03500800000000000000
-      internalID: 373976769574135332
+      spriteID: 2c4240bc5886c7e00800000000000000
+      internalID: 1043824137489097922
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_10
+      name: Standing 2_10
       rect:
         serializedVersion: 2
-        x: 1232
-        y: 3088
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 1426
+        y: 2897
+        width: 310
+        height: 714
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 40fff768c08415380800000000000000
-      internalID: -8984320562994086140
+      spriteID: 6896b48726a234020800000000000000
+      internalID: 2324748435066677638
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_11
+      name: Standing 2_11
       rect:
         serializedVersion: 2
-        x: 1540
-        y: 3088
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 1774
+        y: 2897
+        width: 312
+        height: 713
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d8601a08fcad95fa0800000000000000
-      internalID: -5811373259393792371
+      spriteID: 6a2b164df82eabfc0800000000000000
+      internalID: -3478218654818913626
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_12
+      name: Standing 2_12
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2316
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 34
+        y: 2172
+        width: 314
+        height: 714
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d01393d82a18396f0800000000000000
-      internalID: -679056583648792307
+      spriteID: d389d7ba9c1f23fe0800000000000000
+      internalID: -1210639501341386691
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_13
+      name: Standing 2_13
       rect:
         serializedVersion: 2
-        x: 308
-        y: 2316
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 382
+        y: 2172
+        width: 314
+        height: 714
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e10bce22289131b60800000000000000
-      internalID: 7715538633338171422
+      spriteID: f0d5ae97b919013a0800000000000000
+      internalID: -6696692548948566769
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_14
+      name: Standing 2_14
       rect:
         serializedVersion: 2
-        x: 616
-        y: 2316
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 730
+        y: 2172
+        width: 312
+        height: 714
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d807e3ab8067a4620800000000000000
-      internalID: 2759147501574320269
+      spriteID: 6a86b167048f2b6f0800000000000000
+      internalID: -670200438781679450
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_15
+      name: Standing 2_15
       rect:
         serializedVersion: 2
-        x: 924
-        y: 2316
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 1078
+        y: 2172
+        width: 312
+        height: 715
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 16ef26b6b0e9a3aa0800000000000000
-      internalID: -6180453766729105823
+      spriteID: 29074ee2c8823ba80800000000000000
+      internalID: -8452367493097033582
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_16
+      name: Standing 2_16
       rect:
         serializedVersion: 2
-        x: 1232
-        y: 2316
+        x: 1425
+        y: 2173
         width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        height: 715
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 12b65050efafa0c60800000000000000
-      internalID: 7785310874776202017
+      spriteID: 57dfe20529ce40680800000000000000
+      internalID: -8789640459565728395
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_17
+      name: Standing 2_17
       rect:
         serializedVersion: 2
-        x: 1540
-        y: 2316
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 1772
+        y: 2173
+        width: 305
+        height: 716
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e695efd28ab131950800000000000000
-      internalID: 6418504303073188206
+      spriteID: 49694791be6735f90800000000000000
+      internalID: -6966093446495562092
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_18
+      name: Standing 2_18
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1544
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 31
+        y: 1450
+        width: 299
+        height: 716
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 47bb3b7d0343609c0800000000000000
-      internalID: -3961421437843817612
+      spriteID: 0f40b74bff1f15290800000000000000
+      internalID: -7903269790511594256
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_19
+      name: Standing 2_19
       rect:
         serializedVersion: 2
-        x: 308
-        y: 1544
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 377
+        y: 1451
+        width: 293
+        height: 716
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d96f61d19e0da4460800000000000000
-      internalID: 7226818251703383709
+      spriteID: 102121a1407764660800000000000000
+      internalID: 7369708699739361793
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_20
+      name: Standing 2_20
       rect:
         serializedVersion: 2
-        x: 616
-        y: 1544
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 725
+        y: 1452
+        width: 287
+        height: 716
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 40011638154f94090800000000000000
-      internalID: -8049634228014346236
+      spriteID: e42e708a1a90874e0800000000000000
+      internalID: -1983825045943229874
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_21
+      name: Standing 2_21
       rect:
         serializedVersion: 2
-        x: 924
-        y: 1544
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 1073
+        y: 1452
+        width: 287
+        height: 716
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 455b3043cba16e8e0800000000000000
-      internalID: -1664613616637987500
+      spriteID: 7f9598dcd6d619e20800000000000000
+      internalID: 3355583515734923767
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_22
+      name: Standing 2_22
       rect:
         serializedVersion: 2
-        x: 1232
-        y: 1544
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 1421
+        y: 1452
+        width: 289
+        height: 716
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3a05804c51a670060800000000000000
-      internalID: 6919615994193793187
+      spriteID: a41171f62f4973da0800000000000000
+      internalID: -5965135412462153398
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_23
+      name: Standing 2_23
       rect:
         serializedVersion: 2
-        x: 1540
-        y: 1544
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 1770
+        y: 1452
+        width: 290
+        height: 716
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ce29547c216b45990800000000000000
-      internalID: -7398088096093990164
+      spriteID: 8748a1f84b8a12dc0800000000000000
+      internalID: -3665463128254413704
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_24
+      name: Standing 2_24
       rect:
         serializedVersion: 2
-        x: 0
-        y: 772
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 30
+        y: 727
+        width: 293
+        height: 717
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00ae647997a11a6a0800000000000000
-      internalID: -6439836882631726592
+      spriteID: 9358145feb15606c0800000000000000
+      internalID: -4177561723739208391
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_25
+      name: Standing 2_25
       rect:
         serializedVersion: 2
-        x: 308
-        y: 772
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 379
+        y: 727
+        width: 296
+        height: 716
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 807796726bba758c0800000000000000
-      internalID: -4010548144316516600
+      spriteID: 6fac127125843db60800000000000000
+      internalID: 7769633299556846326
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_26
+      name: Standing 2_26
       rect:
         serializedVersion: 2
-        x: 616
-        y: 772
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 727
+        y: 726
+        width: 297
+        height: 717
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f0a0cd5813ab13fd0800000000000000
-      internalID: -2363903607530845681
+      spriteID: 3424cb47fbb7c7350800000000000000
+      internalID: 6015819264487604803
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_27
+      name: Standing 2_27
       rect:
         serializedVersion: 2
-        x: 924
-        y: 772
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 1075
+        y: 726
+        width: 300
+        height: 716
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9381487665af17030800000000000000
-      internalID: 3490846435199686713
+      spriteID: 5a847281435569650800000000000000
+      internalID: 6239268016000288933
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_28
+      name: Standing 2_28
       rect:
         serializedVersion: 2
-        x: 1232
-        y: 772
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 1423
+        y: 726
+        width: 300
+        height: 716
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 83e676c63cf3a4180800000000000000
-      internalID: -9130415185970368968
+      spriteID: e317c4a2da50ff470800000000000000
+      internalID: 8430463268757991742
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_29
+      name: Standing 2_29
       rect:
         serializedVersion: 2
-        x: 1540
-        y: 772
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 1771
+        y: 726
+        width: 301
+        height: 716
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 29af193180a8336e0800000000000000
-      internalID: -1858990453881177454
+      spriteID: 64bbf340cdea3b130800000000000000
+      internalID: 3581398388677000006
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_30
+      name: Standing 2_30
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 31
+        y: 2
+        width: 300
+        height: 716
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a654673cf78446250800000000000000
-      internalID: 5936949922358510954
+      spriteID: d8f143f05d7c28ec0800000000000000
+      internalID: -3566068237026975859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_31
+      name: Standing 2_31
       rect:
         serializedVersion: 2
-        x: 308
-        y: 0
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 379
+        y: 2
+        width: 300
+        height: 716
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b85a153fc3ffe58e0800000000000000
-      internalID: -1702642971854133877
+      spriteID: 3b1d8c36ad70c5f10800000000000000
+      internalID: 2259689747591516595
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_32
+      name: Standing 2_32
       rect:
         serializedVersion: 2
-        x: 616
-        y: 0
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 727
+        y: 2
+        width: 297
+        height: 717
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3ede0073900f7b5a0800000000000000
-      internalID: -6505467214345212445
+      spriteID: 727ceaf4627907e10800000000000000
+      internalID: 2193419209330837287
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_33
+      name: Standing 2_33
       rect:
         serializedVersion: 2
-        x: 924
-        y: 0
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 1075
+        y: 2
+        width: 295
+        height: 717
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9cd8256e5a481f360800000000000000
-      internalID: 7201683127210773961
+      spriteID: 0c6ecfa86c9130290800000000000000
+      internalID: -7925462578715892032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_34
+      name: Standing 2_34
       rect:
         serializedVersion: 2
-        x: 1232
-        y: 0
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 1422
+        y: 3
+        width: 294
+        height: 717
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 298375e11679e1eb0800000000000000
-      internalID: -4747190513825269614
+      spriteID: 11a8f55cc38c89680800000000000000
+      internalID: -8748022112832222703
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Standing_35
+      name: Standing 2_35
       rect:
         serializedVersion: 2
-        x: 1540
-        y: 0
-        width: 308
-        height: 772
-      alignment: 9
-      pivot: {x: 0.5, y: 0.35}
+        x: 1770
+        y: 3
+        width: 289
+        height: 717
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 45f98ce6bc12434f0800000000000000
-      internalID: -850017272045461676
+      spriteID: a7591a5be0ee70f10800000000000000
+      internalID: 2236017486956959098
       vertices: []
       indices: 
       edges: []
@@ -1026,7 +1026,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 60ec3ab555c22244e9922e78b9943abc
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -1034,46 +1034,44 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":6.0},"gridSpriteSize":{"x":308.0,"y":772.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.3499999940395355},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Standing_0: -3842353275482561300
-      Standing_1: 4096183237034929139
-      Standing_10: -8984320562994086140
-      Standing_11: -5811373259393792371
-      Standing_12: -679056583648792307
-      Standing_13: 7715538633338171422
-      Standing_14: 2759147501574320269
-      Standing_15: -6180453766729105823
-      Standing_16: 7785310874776202017
-      Standing_17: 6418504303073188206
-      Standing_18: -3961421437843817612
-      Standing_19: 7226818251703383709
-      Standing_2: -2965060805336624199
-      Standing_20: -8049634228014346236
-      Standing_21: -1664613616637987500
-      Standing_22: 6919615994193793187
-      Standing_23: -7398088096093990164
-      Standing_24: -6439836882631726592
-      Standing_25: -4010548144316516600
-      Standing_26: -2363903607530845681
-      Standing_27: 3490846435199686713
-      Standing_28: -9130415185970368968
-      Standing_29: -1858990453881177454
-      Standing_3: 2644962545231854332
-      Standing_30: 5936949922358510954
-      Standing_31: -1702642971854133877
-      Standing_32: -6505467214345212445
-      Standing_33: 7201683127210773961
-      Standing_34: -4747190513825269614
-      Standing_35: -850017272045461676
-      Standing_4: -8970904685873194762
-      Standing_5: -6458429237884135735
-      Standing_6: 6145908009506561186
-      Standing_7: -1866220382425048062
-      Standing_8: 3445722214392535029
-      Standing_9: 373976769574135332
+      Standing 2_0: -3120837138067676503
+      Standing 2_1: 181598155074346227
+      Standing 2_10: 2324748435066677638
+      Standing 2_11: -3478218654818913626
+      Standing 2_12: -1210639501341386691
+      Standing 2_13: -6696692548948566769
+      Standing 2_14: -670200438781679450
+      Standing 2_15: -8452367493097033582
+      Standing 2_16: -8789640459565728395
+      Standing 2_17: -6966093446495562092
+      Standing 2_18: -7903269790511594256
+      Standing 2_19: 7369708699739361793
+      Standing 2_2: 5556517464835852933
+      Standing 2_20: -1983825045943229874
+      Standing 2_21: 3355583515734923767
+      Standing 2_22: -5965135412462153398
+      Standing 2_23: -3665463128254413704
+      Standing 2_24: -4177561723739208391
+      Standing 2_25: 7769633299556846326
+      Standing 2_26: 6015819264487604803
+      Standing 2_27: 6239268016000288933
+      Standing 2_28: 8430463268757991742
+      Standing 2_29: 3581398388677000006
+      Standing 2_3: 4790227104886413572
+      Standing 2_30: -3566068237026975859
+      Standing 2_31: 2259689747591516595
+      Standing 2_32: 2193419209330837287
+      Standing 2_33: -7925462578715892032
+      Standing 2_34: -8748022112832222703
+      Standing 2_35: 2236017486956959098
+      Standing 2_4: -1406358943623634200
+      Standing 2_5: 4802950880395697750
+      Standing 2_6: -7480551816705691564
+      Standing 2_7: -5707803814867592895
+      Standing 2_8: 6871257541723164260
+      Standing 2_9: 1043824137489097922
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

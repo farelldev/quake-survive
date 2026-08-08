@@ -5354,6 +5354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DangerousSpot
   hidingSpot: {fileID: 104708663}
+  standSpot: {fileID: 104708663}
   hasSelected: 0
   spotName: blackboard
   resultMessage: The blackboard is highly unstable! During the quake, it collapsed
@@ -5749,6 +5750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HidingSpot
   hidingSpot: {fileID: 242193849}
+  standSpot: {fileID: 242193849}
   hasSelected: 0
   spotName: corner room
   resultMessage: The sturdy corner of the room protected you from the falling objects.
@@ -6579,6 +6581,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1653586536}
+  - {fileID: 2139103065}
   - {fileID: 2049202634}
   m_Father: {fileID: 1238966782}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6700,6 +6703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HidingSpot
   hidingSpot: {fileID: 1653586536}
+  standSpot: {fileID: 2139103065}
   hasSelected: 0
   spotName: table
   resultMessage: The desk is a safe spot! Its sturdy structure protected you from
@@ -7447,6 +7451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DangerousSpot
   hidingSpot: {fileID: 14401598}
+  standSpot: {fileID: 14401598}
   hasSelected: 0
   spotName: glass
   resultMessage: Standing near the window is very dangerous! The glass shattered
@@ -7847,8 +7852,8 @@ Transform:
   m_GameObject: {fileID: 1073686544}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.83, y: -2.3600001, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.1806152}
+  m_LocalPosition: {x: 15.3505535, y: 0.66999996, z: 0}
+  m_LocalScale: {x: 0.39999998, y: 0.39999998, z: 0.18061519}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1238966782}
@@ -7902,7 +7907,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 6
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3152249253537791720, guid: 8a0647f5a74e03544820619d4d4e96c7, type: 3}
+  m_Sprite: {fileID: -3842353275482561300, guid: 3ed8fccc882f2d24ca5db003f14807ff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8039,6 +8044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47ed33d62f8862b43ba8752fed659b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  moveSpeed: 4
 --- !u!1 &1188435084
 GameObject:
   m_ObjectHideFlags: 0
@@ -8065,8 +8071,8 @@ Transform:
   m_GameObject: {fileID: 1188435084}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.1, y: 0.2, z: 0}
-  m_LocalScale: {x: -0.33, y: 0.33, z: 0.33}
+  m_LocalPosition: {x: 17.41, y: 0.67, z: 0}
+  m_LocalScale: {x: -0.32999998, y: 0.32999998, z: 0.32999998}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1238966782}
@@ -8728,6 +8734,8 @@ MonoBehaviour:
   - Adakah tempat bersembunyi lain?
   quakeSubdsideText:
   - Ayam goreng rasanya enak sekali
+  getOutText:
+  - keluar woi
 --- !u!114 &1764324514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9765,6 +9773,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2136185603}
   m_CullTransparentMesh: 1
+--- !u!1 &2139103064
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2139103065}
+  m_Layer: 0
+  m_Name: TableStand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2139103065
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139103064}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10.55, y: -0.49855554, z: 0}
+  m_LocalScale: {x: -0.35, y: 0.35, z: 0.35}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 559351800}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

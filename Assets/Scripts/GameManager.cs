@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     [TextArea(2, 5)] public string[] chooseText;
     [TextArea(2, 5)] public string[] chooseAgainText;
     [TextArea(2, 5)] public string[] quakeSubdsideText;
+    [TextArea(2, 5)] public string[] getOutText;
     private bool isDialogueActive = false;
     private int spotSelected = 0;
     void Start()
@@ -253,7 +254,7 @@ public class GameManager : MonoBehaviour
 
         if (!hidingSpot.IsSafe && playerController != null)
         {
-            playerController.PlayHurtAnimation(hidingSpot.PlayerHurtTrigger);
+            playerController.TriggerAnim(hidingSpot.PlayerHurtTrigger);
         }
 
         yield return new WaitForSeconds(2f);
@@ -282,7 +283,7 @@ public class GameManager : MonoBehaviour
         if (allDone)
         {
             Debug.Log("Semua spot sudah dites. Masuk ke Fase Outro dari tempat sembunyi.");
-            StartCoroutine(OutroRoutine());
+            StartCoroutine(OutroRoutine(hidingSpot));
         }
         else
         {
@@ -314,15 +315,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    IEnumerator OutroRoutine()
+    IEnumerator OutroRoutine(HidingSpot hidingSpot)
     {
         currentState = GameState.Over;
         
         yield return new WaitForSeconds(1f);
 
+        player.transform.position = hidingSpot.standSpot.position;
+
         if (playerController != null) 
         {
-            playerController.triggerStanding("standing");
+            playerController.TriggerAnim("standing");
             playerController.SetHiding(false);
         }
 
@@ -333,5 +336,19 @@ public class GameManager : MonoBehaviour
             
             yield return new WaitUntil(() => !isDialogueActive);
         }
+    
+        if (dialogueManager != null && getOutText != null && getOutText.Length > 0)
+        {
+            dialogueManager.StartDialogue(getOutText, true, null);
+        }
+
+        if (playerController != null)
+        {
+            playerController.EnableManualControl(true);
+        }
+
+        Debug.Log("Player sekarang bisa jalan bebas pakai WASD.");
+
+
     }
 }
