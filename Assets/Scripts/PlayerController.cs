@@ -95,7 +95,16 @@ public class PlayerController : MonoBehaviour
 
     public void SetHiding(bool isHiding)
     {
-        if(anim != null) anim.SetBool("isHiding", isHiding);
+        if(anim != null)
+            {
+            anim.SetBool("isHiding", isHiding);
+        }
+
+        BoxCollider2D col = GetComponent<BoxCollider2D>();
+        if (col != null)
+        {
+            col.enabled = !isHiding;
+        }
     }
 
     public void SetWalking(bool isWalking)
