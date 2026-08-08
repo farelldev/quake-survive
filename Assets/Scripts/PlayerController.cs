@@ -6,6 +6,13 @@ public class PlayerController : MonoBehaviour
     [Header("Manual Movement Settings")]
     public float moveSpeed = 4f;
     private bool canMoveManually = false;
+
+    [Header("Perspective Scale Settings")]
+    public float minY = -2f;
+    public float maxY = -0.57f;
+    public float minScale = 0.33f;
+    public float maxScale = 0.365f;
+
     private Rigidbody2D rb;
 
     void Awake()
@@ -23,6 +30,7 @@ public class PlayerController : MonoBehaviour
         if (canMoveManually)
         {
             HandleManualMovement();
+            UpdatePerspectiveScale();
         }
     }
 
@@ -34,6 +42,16 @@ public class PlayerController : MonoBehaviour
             rb.linearVelocity = Vector2.zero;
             SetRunning(false);
         }
+    }
+
+    private void UpdatePerspectiveScale()
+    {
+        float t = Mathf.InverseLerp(minY, maxY, transform.position.y);
+
+        float targetScale = Mathf.Lerp(maxScale, minScale, t);
+
+        float facingDirection = transform.localScale.x >= 0 ? 1f : -1f;
+        transform.localScale = new Vector3(facingDirection * targetScale, targetScale, 1f);
     }
 
     private void HandleManualMovement()

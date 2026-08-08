@@ -235,9 +235,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 3860
-        width: 308
-        height: 772
+        y: 3620
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,10 +256,10 @@ TextureImporter:
       name: Standing_1
       rect:
         serializedVersion: 2
-        x: 308
-        y: 3860
-        width: 308
-        height: 772
+        x: 348
+        y: 3620
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,10 +278,10 @@ TextureImporter:
       name: Standing_2
       rect:
         serializedVersion: 2
-        x: 616
-        y: 3860
-        width: 308
-        height: 772
+        x: 696
+        y: 3620
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -300,10 +300,10 @@ TextureImporter:
       name: Standing_3
       rect:
         serializedVersion: 2
-        x: 924
-        y: 3860
-        width: 308
-        height: 772
+        x: 1044
+        y: 3620
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -322,10 +322,10 @@ TextureImporter:
       name: Standing_4
       rect:
         serializedVersion: 2
-        x: 1232
-        y: 3860
-        width: 308
-        height: 772
+        x: 1392
+        y: 3620
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -344,10 +344,10 @@ TextureImporter:
       name: Standing_5
       rect:
         serializedVersion: 2
-        x: 1540
-        y: 3860
-        width: 308
-        height: 772
+        x: 1740
+        y: 3620
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -367,9 +367,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 3088
-        width: 308
-        height: 772
+        y: 2896
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -388,10 +388,10 @@ TextureImporter:
       name: Standing_7
       rect:
         serializedVersion: 2
-        x: 308
-        y: 3088
-        width: 308
-        height: 772
+        x: 348
+        y: 2896
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -410,10 +410,10 @@ TextureImporter:
       name: Standing_8
       rect:
         serializedVersion: 2
-        x: 616
-        y: 3088
-        width: 308
-        height: 772
+        x: 696
+        y: 2896
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -432,10 +432,10 @@ TextureImporter:
       name: Standing_9
       rect:
         serializedVersion: 2
-        x: 924
-        y: 3088
-        width: 308
-        height: 772
+        x: 1044
+        y: 2896
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -454,10 +454,10 @@ TextureImporter:
       name: Standing_10
       rect:
         serializedVersion: 2
-        x: 1232
-        y: 3088
-        width: 308
-        height: 772
+        x: 1392
+        y: 2896
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -476,10 +476,10 @@ TextureImporter:
       name: Standing_11
       rect:
         serializedVersion: 2
-        x: 1540
-        y: 3088
-        width: 308
-        height: 772
+        x: 1740
+        y: 2896
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -499,9 +499,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 2316
-        width: 308
-        height: 772
+        y: 2172
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -520,10 +520,10 @@ TextureImporter:
       name: Standing_13
       rect:
         serializedVersion: 2
-        x: 308
-        y: 2316
-        width: 308
-        height: 772
+        x: 348
+        y: 2172
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -542,10 +542,10 @@ TextureImporter:
       name: Standing_14
       rect:
         serializedVersion: 2
-        x: 616
-        y: 2316
-        width: 308
-        height: 772
+        x: 696
+        y: 2172
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -564,10 +564,10 @@ TextureImporter:
       name: Standing_15
       rect:
         serializedVersion: 2
-        x: 924
-        y: 2316
-        width: 308
-        height: 772
+        x: 1044
+        y: 2172
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -586,10 +586,10 @@ TextureImporter:
       name: Standing_16
       rect:
         serializedVersion: 2
-        x: 1232
-        y: 2316
-        width: 308
-        height: 772
+        x: 1392
+        y: 2172
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -608,10 +608,10 @@ TextureImporter:
       name: Standing_17
       rect:
         serializedVersion: 2
-        x: 1540
-        y: 2316
-        width: 308
-        height: 772
+        x: 1740
+        y: 2172
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -631,9 +631,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1544
-        width: 308
-        height: 772
+        y: 1448
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -652,10 +652,10 @@ TextureImporter:
       name: Standing_19
       rect:
         serializedVersion: 2
-        x: 308
-        y: 1544
-        width: 308
-        height: 772
+        x: 348
+        y: 1448
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -674,10 +674,10 @@ TextureImporter:
       name: Standing_20
       rect:
         serializedVersion: 2
-        x: 616
-        y: 1544
-        width: 308
-        height: 772
+        x: 696
+        y: 1448
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -696,10 +696,10 @@ TextureImporter:
       name: Standing_21
       rect:
         serializedVersion: 2
-        x: 924
-        y: 1544
-        width: 308
-        height: 772
+        x: 1044
+        y: 1448
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -718,10 +718,10 @@ TextureImporter:
       name: Standing_22
       rect:
         serializedVersion: 2
-        x: 1232
-        y: 1544
-        width: 308
-        height: 772
+        x: 1392
+        y: 1448
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -740,10 +740,10 @@ TextureImporter:
       name: Standing_23
       rect:
         serializedVersion: 2
-        x: 1540
-        y: 1544
-        width: 308
-        height: 772
+        x: 1740
+        y: 1448
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -763,9 +763,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 772
-        width: 308
-        height: 772
+        y: 724
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -784,10 +784,10 @@ TextureImporter:
       name: Standing_25
       rect:
         serializedVersion: 2
-        x: 308
-        y: 772
-        width: 308
-        height: 772
+        x: 348
+        y: 724
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -806,10 +806,10 @@ TextureImporter:
       name: Standing_26
       rect:
         serializedVersion: 2
-        x: 616
-        y: 772
-        width: 308
-        height: 772
+        x: 696
+        y: 724
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -828,10 +828,10 @@ TextureImporter:
       name: Standing_27
       rect:
         serializedVersion: 2
-        x: 924
-        y: 772
-        width: 308
-        height: 772
+        x: 1044
+        y: 724
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -850,10 +850,10 @@ TextureImporter:
       name: Standing_28
       rect:
         serializedVersion: 2
-        x: 1232
-        y: 772
-        width: 308
-        height: 772
+        x: 1392
+        y: 724
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -872,10 +872,10 @@ TextureImporter:
       name: Standing_29
       rect:
         serializedVersion: 2
-        x: 1540
-        y: 772
-        width: 308
-        height: 772
+        x: 1740
+        y: 724
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -896,8 +896,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 308
-        height: 772
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -916,10 +916,10 @@ TextureImporter:
       name: Standing_31
       rect:
         serializedVersion: 2
-        x: 308
+        x: 348
         y: 0
-        width: 308
-        height: 772
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -938,10 +938,10 @@ TextureImporter:
       name: Standing_32
       rect:
         serializedVersion: 2
-        x: 616
+        x: 696
         y: 0
-        width: 308
-        height: 772
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -960,10 +960,10 @@ TextureImporter:
       name: Standing_33
       rect:
         serializedVersion: 2
-        x: 924
+        x: 1044
         y: 0
-        width: 308
-        height: 772
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -982,10 +982,10 @@ TextureImporter:
       name: Standing_34
       rect:
         serializedVersion: 2
-        x: 1232
+        x: 1392
         y: 0
-        width: 308
-        height: 772
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1004,10 +1004,10 @@ TextureImporter:
       name: Standing_35
       rect:
         serializedVersion: 2
-        x: 1540
+        x: 1740
         y: 0
-        width: 308
-        height: 772
+        width: 348
+        height: 724
       alignment: 9
       pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1026,7 +1026,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 60ec3ab555c22244e9922e78b9943abc
+    spriteID: e28cd85bdc3ce4946b44166797fc1442
     internalID: 0
     vertices: []
     indices: 
@@ -1036,7 +1036,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":6.0},"gridSpriteSize":{"x":308.0,"y":772.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.3499999940395355},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":6.0},"gridSpriteSize":{"x":348.0,"y":724.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.3499999940395355},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Standing_0: -3842353275482561300
       Standing_1: 4096183237034929139
