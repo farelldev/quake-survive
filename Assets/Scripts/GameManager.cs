@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Status (State Machine)")]
     public GameState currentState = GameState.Intro;
-    public enum GameState { Intro, Idle, Quake, Over }
+    public enum GameState { Intro, Idle, Quake, Outro, Over }
 
     [Header("Intro Settings")]
     public GameObject blackScreen;
@@ -317,7 +317,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator OutroRoutine(HidingSpot hidingSpot)
     {
-        currentState = GameState.Over;
+        currentState = GameState.Outro;
         
         yield return new WaitForSeconds(1f);
 
@@ -348,7 +348,17 @@ public class GameManager : MonoBehaviour
         }
 
         Debug.Log("Player sekarang bisa jalan bebas pakai WASD.");
+    }
 
+    public void FinishGame()
+    {
+        Debug.Log("Pemain berhasil keluar! Game Tamat.");
+        currentState = GameState.Over;
 
+        if (playerController != null) playerController.EnableManualControl(false);
+
+        if (dialogueManager != null) dialogueManager.CloseAllDialogues();
+
+        if (uiManager != null) uiManager.ShowEndGamePopup();
     }
 }

@@ -105,6 +105,12 @@ public class PlayerController : MonoBehaviour
         {
             col.enabled = !isHiding;
         }
+
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        if (sr != null)
+        {
+            sr.sortingOrder = isHiding ? 2 : 3;
+        }
     }
 
     public void SetWalking(bool isWalking)

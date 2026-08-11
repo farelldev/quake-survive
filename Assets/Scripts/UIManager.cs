@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class UIManager : MonoBehaviour
     [Header("Status Sprites")]
     public Sprite safeSprite;
     public Sprite dangerSprite;
+
+    [Header("End Game UI")]
+    public GameObject endGamePanel;
 
     void Start()
     {
@@ -51,6 +55,25 @@ public class UIManager : MonoBehaviour
         popupPanel.transform.DOScale(Vector3.one, 0.5f).SetEase(Ease.OutBack).SetUpdate(true);
 
         Time.timeScale = 0f; 
+    }
+
+    public void ShowEndGamePopup()
+    {
+        if (endGamePanel != null) 
+        {
+            dimBackground.SetActive(true);
+            endGamePanel.SetActive(true);
+
+            endGamePanel.transform.localScale = Vector3.zero;
+            endGamePanel.transform.DOScale(Vector3.one, 0.5f).SetEase(Ease.OutBack).SetUpdate(true);
+
+            Time.timeScale = 0f; 
+        }
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void ClosePopup()
