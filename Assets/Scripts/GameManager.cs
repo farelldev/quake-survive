@@ -70,22 +70,23 @@ public class GameManager : MonoBehaviour
         playerRenderer.sortingOrder = 3;
 
         // Character Walking
-        float walkDuration = 7f;
+        float walkDuration = 6.5f;
         if (playerController != null) playerController.SetWalking(true);
         player.transform.DOMove(introSpawnPointEnd.position, walkDuration).SetEase(Ease.Linear);
 
         // "Pada suatu pagi yang cerah, ..."
         if (dialogueManager != null && initialText.Length > 0)
         {
+            dialogueManager.isLocked = true;
             isDialogueActive = true;
             string[] firstText = new string[] { initialText[0] }; 
             dialogueManager.StartDialogue(firstText, false, () => { isDialogueActive = false; });
         }
 
         float timer1 = 0f;
-        float maxWait1 = 5f;
+        float maxWait1 = 4.5f;
 
-        while (timer1 < maxWait1)
+        while (timer1 < maxWait1 && isDialogueActive)
         {
             timer1 += Time.deltaTime;
             yield return null;
@@ -100,6 +101,7 @@ public class GameManager : MonoBehaviour
         // "Namun, tiba-tiba..."
         if (dialogueManager != null && initialText.Length > 1)
         {
+            dialogueManager.isLocked = true;
             isDialogueActive = true;
             string[] secondText = new string[] { initialText[1] };
             dialogueManager.StartDialogue(secondText, false, () => { isDialogueActive = false; });
