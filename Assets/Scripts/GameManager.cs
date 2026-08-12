@@ -360,5 +360,8 @@ public class GameManager : MonoBehaviour
         if (dialogueManager != null) dialogueManager.CloseAllDialogues();
 
         if (uiManager != null) uiManager.ShowEndGamePopup();
+
+        playerController.SetRunning(true);
+        player.transform.DOMove(introSpawnPointStart.position, 1f).SetEase(Ease.Linear);
     }
 }

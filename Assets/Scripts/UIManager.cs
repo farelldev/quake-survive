@@ -66,8 +66,6 @@ public class UIManager : MonoBehaviour
 
             endGamePanel.transform.localScale = Vector3.zero;
             endGamePanel.transform.DOScale(Vector3.one, 0.5f).SetEase(Ease.OutBack).SetUpdate(true);
-
-            Time.timeScale = 0f; 
         }
     }
 
