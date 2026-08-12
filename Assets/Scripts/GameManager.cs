@@ -63,10 +63,11 @@ public class GameManager : MonoBehaviour
         blackScreen.SetActive(false);        
 
         // 1. SET CHARACTER POSITION
-        if (introSpawnPointStart != null){
+        if (introSpawnPointStart != null)
+        {
             player.transform.position = introSpawnPointStart.position;
             player.transform.localScale = introSpawnPointStart.localScale;
-            }
+        }
         playerRenderer.sortingOrder = 3;
 
         // Character Walking
