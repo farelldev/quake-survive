@@ -9739,9 +9739,10 @@ MonoBehaviour:
   chooseAgainText:
   - Adakah tempat bersembunyi lain?
   quakeSubdsideText:
-  - Ayam goreng rasanya enak sekali
+  - Sepertinya gempanya sudah reda. Cepat, keluar dari kelas sebelum gempa susulan
+    datang!
   getOutText:
-  - keluar woi
+  - Keluar dari kelas!
 --- !u!114 &1764324514
 MonoBehaviour:
   m_ObjectHideFlags: 0
