@@ -5468,8 +5468,8 @@ MonoBehaviour:
   standSpot: {fileID: 104708663}
   hasSelected: 0
   spotName: blackboard
-  resultMessage: The blackboard is highly unstable! During the quake, it collapsed
-    and fell on you.
+  resultMessage: Papan tulis itu sangat tidak stabil! Saat gempa terjadi, papan tulis
+    itu roboh dan menimpamu.
   obstruction: {fileID: 0}
   shineEffect: {fileID: 1457134040}
   pulsePace: 3
@@ -5696,7 +5696,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 196}
-  m_SizeDelta: {x: 504.99, y: 87.13}
+  m_SizeDelta: {x: 493.7, y: 87.13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &289839129
 MonoBehaviour:
@@ -5730,7 +5730,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 1
-  m_Spacing: 60
+  m_Spacing: 50
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
@@ -5864,8 +5864,8 @@ MonoBehaviour:
   standSpot: {fileID: 242193849}
   hasSelected: 0
   spotName: corner room
-  resultMessage: The sturdy corner of the room protected you from the falling objects.
-    Great choice!
+  resultMessage: Sudut ruangan yang kokoh itu melindungimu dari benda-benda yang
+    jatuh. Pilihan yang tepat!
   obstruction: {fileID: 0}
   shineEffect: {fileID: 1709643853}
   pulsePace: 3
@@ -6819,8 +6819,8 @@ MonoBehaviour:
   standSpot: {fileID: 2139103065}
   hasSelected: 0
   spotName: table
-  resultMessage: The desk is a safe spot! Its sturdy structure protected you from
-    the falling debris.
+  resultMessage: Meja itu tempat yang aman! Strukturnya yang kokoh melindungimu dari
+    puing-puing yang berjatuhan.
   obstruction: {fileID: 224284369}
   shineEffect: {fileID: 2049202633}
   pulsePace: 3
@@ -7722,8 +7722,8 @@ MonoBehaviour:
   standSpot: {fileID: 14401598}
   hasSelected: 0
   spotName: glass
-  resultMessage: Standing near the window is very dangerous! The glass shattered
-    during the quake, and the shards injured you.
+  resultMessage: Berdiri di dekat jendela sangat berbahaya! Kaca jendela pecah saat
+    gempa, dan pecahannya melukaimu.
   obstruction: {fileID: 0}
   shineEffect: {fileID: 992758009}
   pulsePace: 3
@@ -7833,7 +7833,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: CONTINUE
+  m_text: LANJUTKAN
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 887cc6999784a88458008223505a9144, type: 2}
   m_sharedMaterial: {fileID: 91593469084706841, guid: 887cc6999784a88458008223505a9144, type: 2}
@@ -8137,7 +8137,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 486.99, y: -43.565}
+  m_AnchoredPosition: {x: 475.7, y: -43.565}
   m_SizeDelta: {x: 87.13, y: 87.13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1042472350
@@ -8218,8 +8218,8 @@ Transform:
   m_GameObject: {fileID: 1073686544}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.3505535, y: 0.66999996, z: 0}
-  m_LocalScale: {x: 0.39999998, y: 0.39999998, z: 0.18061519}
+  m_LocalPosition: {x: 13.9, y: 0.59, z: 0}
+  m_LocalScale: {x: 0.42987996, y: 0.42987996, z: 0.19410715}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1238966782}
@@ -8415,8 +8415,8 @@ MonoBehaviour:
   moveSpeed: 4
   minY: -2
   maxY: -0.57
-  minScale: 0.33
-  maxScale: 0.365
+  minScale: 0.4
+  maxScale: 0.43
 --- !u!50 &1086631246
 Rigidbody2D:
   serializedVersion: 5
@@ -8451,7 +8451,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1086631241}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -8650,8 +8650,8 @@ Transform:
   m_GameObject: {fileID: 1188435084}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.41, y: 0.67, z: 0}
-  m_LocalScale: {x: -0.32999998, y: 0.32999998, z: 0.32999998}
+  m_LocalPosition: {x: 14.684999, y: 0.44719994, z: 0}
+  m_LocalScale: {x: -0.35, y: 0.35, z: 0.32999998}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1238966782}
@@ -8925,8 +8925,8 @@ Transform:
   m_GameObject: {fileID: 1239546411}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.48, y: 0.67, z: 0}
-  m_LocalScale: {x: -0.345, y: 0.345, z: 0.345}
+  m_LocalPosition: {x: -2.48, y: 0.35, z: 0}
+  m_LocalScale: {x: -0.4, y: -0.4, z: -0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1238966782}
@@ -8967,6 +8967,7 @@ MonoBehaviour:
   narratorText: {fileID: 483155291}
   typingSpeed: 0.04
   isTyping: 0
+  isLocked: 0
 --- !u!4 &1251872914
 Transform:
   m_ObjectHideFlags: 0
@@ -9738,9 +9739,10 @@ MonoBehaviour:
   chooseAgainText:
   - Adakah tempat bersembunyi lain?
   quakeSubdsideText:
-  - Ayam goreng rasanya enak sekali
+  - Sepertinya gempanya sudah reda. Cepat, keluar dari kelas sebelum gempa susulan
+    datang!
   getOutText:
-  - keluar woi
+  - Keluar dari kelas!
 --- !u!114 &1764324514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10353,7 +10355,7 @@ Transform:
   m_GameObject: {fileID: 1916058387}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.35, y: 3.2, z: 0}
+  m_LocalPosition: {x: -8.38, y: 2.49, z: 0}
   m_LocalScale: {x: 0.5638368, y: 0.5638368, z: 0.5638368}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10583,7 +10585,7 @@ Transform:
   m_GameObject: {fileID: 1988602238}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.04, y: 0.67, z: 0}
+  m_LocalPosition: {x: 10.04, y: 0.35, z: 0}
   m_LocalScale: {x: -0.4, y: 0.4, z: 0.345}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10827,9 +10829,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis
+  m_text: Berdiri di dekat jendela sangat berbahaya! Kaca jendela pecah saat gempa,
+    dan pecahannya melukaimu.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 78e465d425b4188439013e3fdf0d88ad, type: 2}
   m_sharedMaterial: {fileID: 3467897234889518137, guid: 78e465d425b4188439013e3fdf0d88ad, type: 2}
@@ -10856,8 +10857,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -10944,8 +10945,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 252.495, y: -43.565}
-  m_SizeDelta: {x: 312.99, y: 87.13}
+  m_AnchoredPosition: {x: 246.85, y: -43.565}
+  m_SizeDelta: {x: 321.7, y: 87.13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2119587130
 MonoBehaviour:
@@ -10981,7 +10982,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: DANGER!
+  m_text: BAHAYA!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 887cc6999784a88458008223505a9144, type: 2}
   m_sharedMaterial: {fileID: 91593469084706841, guid: 887cc6999784a88458008223505a9144, type: 2}
@@ -11018,7 +11019,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 4
+  m_characterSpacing: 3
   m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -11031,7 +11032,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
+  m_ActiveFontFeatures: 
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1

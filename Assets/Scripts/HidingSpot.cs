@@ -64,7 +64,7 @@ public class HidingSpot : MonoBehaviour
     void Update()
     {
         if(shineEffect != null || shineRenderer == null){
-            bool mustHide = hasSelected || gameManager.currentState != GameManager.GameState.Idle;
+            bool mustHide = hasSelected || gameManager.currentState != GameManager.GameState.Waiting;
             float targetFade = mustHide ? 0f : 1f;
             
             fadeAlpha = Mathf.MoveTowards(fadeAlpha, targetFade, Time.deltaTime * fadePace);

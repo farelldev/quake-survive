@@ -24,6 +24,7 @@ public class DialogueManager : MonoBehaviour
     private string[] currentLines;
     private int currentLineIndex = 0;
     [HideInInspector] public bool isTyping = false;
+    [HideInInspector] public bool isLocked = false;
     private bool currentIsInstruction = false;
     
     private Action onDialogueComplete; 
@@ -37,17 +38,11 @@ public class DialogueManager : MonoBehaviour
             originalIconScale = instructionIcon.transform.localScale;
         }
     }
-
-    void Update()
-    {
-        if (instructionIcon != null && instructionPanel.activeSelf)
-        {
-            
-        }
-    }
-
+    
     public void CloseAllDialogues()
     {
+        isLocked = false;
+        
         if (instructionPanel != null) instructionPanel.SetActive(false);
         if (narratorPanel != null) narratorPanel.SetActive(false);
 
@@ -98,18 +93,23 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            currentLineIndex++;
-            if (currentLineIndex < currentLines.Length)
+            if (!isLocked)
             {
-                if (currentIsInstruction)
-                    DisplayCurrentLineInstant();
+                currentLineIndex++;
+                if (currentLineIndex < currentLines.Length)
+                {
+                    if (currentIsInstruction)
+                        DisplayCurrentLineInstant();
+                    else
+                        StartCoroutine(TypeSentence(currentLines[currentLineIndex]));
+                }
                 else
-                    StartCoroutine(TypeSentence(currentLines[currentLineIndex]));
+                {
+                    EndDialogue();
+                }
             }
-            else
-            {
-                EndDialogue();
-            }
+
+            return;
         }
     }
 

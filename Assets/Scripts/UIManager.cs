@@ -37,13 +37,13 @@ public class UIManager : MonoBehaviour
 
         if (isSafe)
         {
-            titleText.text = "SURVIVED!";
+            titleText.text = "KAMU AMAN!";
             statusIcon1.sprite = safeSprite;
             statusIcon2.sprite = safeSprite;
         }
         else
         {
-            titleText.text = "DANGER!";
+            titleText.text = "BAHAYA!";
             statusIcon1.sprite = dangerSprite;
             statusIcon2.sprite = dangerSprite;
         }

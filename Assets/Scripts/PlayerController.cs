@@ -37,6 +37,13 @@ public class PlayerController : MonoBehaviour
     public void EnableManualControl(bool enable)
     {
         canMoveManually = enable;
+
+        BoxCollider2D col = GetComponent<BoxCollider2D>();
+        if (col != null)
+        {
+            col.enabled = enable; 
+        }
+
         if (!enable && rb != null)
         {
             rb.linearVelocity = Vector2.zero;
