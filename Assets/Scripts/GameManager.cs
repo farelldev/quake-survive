@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Status (State Machine)")]
     public GameState currentState = GameState.Intro;
-    public enum GameState { Intro, Idle, Quake, Outro, Over }
+    public enum GameState { Intro, Waiting, Quake, Outro, Over }
 
     [Header("Intro Settings")]
     public GameObject blackScreen;
@@ -136,8 +136,6 @@ public class GameManager : MonoBehaviour
         // Intro Quake Dialogue
         float shakeInterval = 4.5f; 
         float shakeTimer = 0f;
-        
-        // Jeda waktu menunggu SETELAH teks selesai diketik (Misal: 1.5 detik)
         float maxWaitAfterTyping = 1.5f; 
 
         if (dialogueManager != null && quakeText != null && quakeText.Length > 0)
@@ -204,12 +202,12 @@ public class GameManager : MonoBehaviour
             dialogueManager.StartDialogue(currText, true, null);
         }
 
-        currentState = GameState.Idle;
+        currentState = GameState.Waiting;
     }
 
     public void SelectHidingSpot(HidingSpot hidingSpot)
     {
-        if (currentState != GameState.Idle || hidingSpot.hasSelected) return;
+        if (currentState != GameState.Waiting || hidingSpot.hasSelected) return;
         if (dialogueManager != null)
         {
             dialogueManager.CloseAllDialogues();
@@ -314,23 +312,15 @@ public class GameManager : MonoBehaviour
                 dialogueManager.StartDialogue(currText, true, () => { isDialogueActive = false; });
             }
             
-            currentState = GameState.Idle; 
+            currentState = GameState.Waiting; 
         }
     }
 
     IEnumerator OutroRoutine(HidingSpot hidingSpot)
     {
         currentState = GameState.Outro;
-        
-        yield return new WaitForSeconds(1f);
 
-        player.transform.position = hidingSpot.standSpot.position;
-
-        if (playerController != null) 
-        {
-            playerController.TriggerAnim("standing");
-            playerController.SetHiding(false);
-        }
+        yield return new WaitForSeconds(1.5f);
 
         if (dialogueManager != null && quakeSubdsideText != null && quakeSubdsideText.Length > 0)
         {
@@ -338,6 +328,14 @@ public class GameManager : MonoBehaviour
             dialogueManager.StartDialogue(quakeSubdsideText, false, () => { isDialogueActive = false; });
             
             yield return new WaitUntil(() => !isDialogueActive);
+        }        
+        
+        player.transform.position = hidingSpot.standSpot.position;
+
+        if (playerController != null) 
+        {
+            playerController.TriggerAnim("standing");
+            playerController.SetHiding(false);
         }
     
         if (dialogueManager != null && getOutText != null && getOutText.Length > 0)
